@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cervkrius03d6"]
+
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://4u5aijee8elm" path="res://shaders/water.gdshader" id="3"]
+[ext_resource type="Script" uid="uid://1ollv36hwu8c" path="res://scripts/Main.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://dilwswasxr1f2" path="res://low_poly_fishermans_hut/scene.gltf" id="5_vcsgt"]
+
+[sub_resource type="ProceduralSkyMaterial" id="1"]
+sky_top_color = Color(0.25, 0.55, 0.95, 1)
+sky_horizon_color = Color(0.75, 0.88, 0.95, 1)
+ground_bottom_color = Color(0.3, 0.25, 0.2, 1)
+ground_horizon_color = Color(0.75, 0.88, 0.95, 1)
+
+[sub_resource type="Sky" id="2"]
+sky_material = SubResource("1")
+
+[sub_resource type="Environment" id="3"]
+background_mode = 2
+sky = SubResource("2")
+
+[sub_resource type="PlaneMesh" id="7"]
+size = Vector2(300, 300)
+
+[sub_resource type="ShaderMaterial" id="8"]
+render_priority = 0
+shader = ExtResource("3")
+shader_parameter/shallow_color = Color(0.2, 0.75, 0.8, 0.85)
+shader_parameter/deep_color = Color(0.02, 0.2, 0.45, 0.95)
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_height = 0.08
+shader_parameter/wave_freq = 3.0
+
+[sub_resource type="CylinderMesh" id="4"]
+top_radius = 12.0
+bottom_radius = 12.0
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="5"]
+albedo_color = Color(0.93, 0.86, 0.68, 1)
+
+[sub_resource type="CylinderShape3D" id="6"]
+height = 0.6
+radius = 12.0
+
+[sub_resource type="SphereMesh" id="9"]
+radius = 3.5
+height = 6.5
+
+[sub_resource type="StandardMaterial3D" id="10"]
+albedo_color = Color(0.25, 0.55, 0.25, 1)
+
+[sub_resource type="CylinderMesh" id="11"]
+top_radius = 0.12
+bottom_radius = 0.16
+height = 3.0
+
+[sub_resource type="StandardMaterial3D" id="12"]
+albedo_color = Color(0.4, 0.26, 0.14, 1)
+
+[sub_resource type="SphereMesh" id="13"]
+radius = 1.0
+height = 1.3
+
+[sub_resource type="StandardMaterial3D" id="14"]
+albedo_color = Color(0.15, 0.5, 0.2, 1)
+
+[node name="Main" type="Node3D" unique_id=952410759]
+script = ExtResource("4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=798420012]
+environment = SubResource("3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=961896999]
+transform = Transform3D(0.8, -0.35, 0.48, 0, 0.8, 0.6, -0.6, -0.48, 0.64, 0, 8, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Water" type="MeshInstance3D" parent="." unique_id=914113038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("7")
+surface_material_override/0 = SubResource("8")
+
+[node name="Island" type="StaticBody3D" parent="." unique_id=1749351670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+
+[node name="GroundMesh" type="MeshInstance3D" parent="Island" unique_id=708569617]
+mesh = SubResource("4")
+surface_material_override/0 = SubResource("5")
+
+[node name="GroundCollision" type="CollisionShape3D" parent="Island" unique_id=1917089426]
+shape = SubResource("6")
+
+[node name="Hill" type="MeshInstance3D" parent="." unique_id=1744398622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.5, -6)
+mesh = SubResource("9")
+surface_material_override/0 = SubResource("10")
+
+[node name="PalmTree1" type="Node3D" parent="." unique_id=1297177129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="Trunk" type="MeshInstance3D" parent="PalmTree1" unique_id=1559658980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("11")
+surface_material_override/0 = SubResource("12")
+
+[node name="Leaves" type="MeshInstance3D" parent="PalmTree1" unique_id=1756625378]
+transform = Transform3D(1.4, 0, 0, 0, 0.6, 0, 0, 0, 1.4, 0, 3.2, 0)
+mesh = SubResource("13")
+surface_material_override/0 = SubResource("14")
+
+[node name="PalmTree2" type="Node3D" parent="." unique_id=532349405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="Trunk" type="MeshInstance3D" parent="PalmTree2" unique_id=1081418211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("11")
+surface_material_override/0 = SubResource("12")
+
+[node name="Leaves" type="MeshInstance3D" parent="PalmTree2" unique_id=772833960]
+transform = Transform3D(1.4, 0, 0, 0, 0.6, 0, 0, 0, 1.4, 0, 3.2, 0)
+mesh = SubResource("13")
+surface_material_override/0 = SubResource("14")
+
+[node name="PalmTree3" type="Node3D" parent="." unique_id=2086468667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="Trunk" type="MeshInstance3D" parent="PalmTree3" unique_id=1745335927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("11")
+surface_material_override/0 = SubResource("12")
+
+[node name="Leaves" type="MeshInstance3D" parent="PalmTree3" unique_id=1479052393]
+transform = Transform3D(1.4, 0, 0, 0, 0.6, 0, 0, 0, 1.4, 0, 3.2, 0)
+mesh = SubResource("13")
+surface_material_override/0 = SubResource("14")
+
+[node name="Player" parent="." unique_id=906985474 instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
+
+[node name="HUD" parent="." unique_id=1405315193 instance=ExtResource("2")]
+
+[node name="Sketchfab_Scene" parent="." unique_id=2089736588 instance=ExtResource("5_vcsgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.302856, -69.04874, -11.607513)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=230594763 instance=ExtResource("5_vcsgt")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, -424.37244, -473.86243, -282.30292)

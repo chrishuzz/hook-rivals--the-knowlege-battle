@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://do8gm4aog3wkg"]
+
+[ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="1_mggpi"]
+[ext_resource type="Texture2D" uid="uid://dstbn25lqbrjf" path="res://GAME/PLACEHOLDER ISLAND.jpg" id="1_weff3"]
+[ext_resource type="Texture2D" uid="uid://lv8f0ci4vml5" path="res://GAME/FISH.png" id="2_fgney"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
+
+[node name="LAODING SCREEN" type="Control" unique_id=1390255275]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1841917872]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ImageTexture_g4v7s")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=940392182]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 649.0
+texture = ExtResource("1_weff3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect" unique_id=711718080]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 283.0
+offset_right = 560.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(0.82871354, 0.22510862, 0.23414147, 1)
+theme_override_font_sizes/font_size = 25
+text = "!"
+
+[node name="Fish" type="Sprite2D" parent="TextureRect/TextureRect" unique_id=904739045]
+position = Vector2(263.99994, 276)
+scale = Vector2(0.07361116, 0.09097221)
+texture = ExtResource("2_fgney")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1326653287]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.002
+anchor_bottom = 0.025
+offset_left = 2.0
+offset_top = 595.0
+offset_right = 1145.696
+offset_bottom = 627.8
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureProgressBar" unique_id=1499248352]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 1142.0
+offset_bottom = 53.0
+
+[node name="Label4" type="Label" parent="." unique_id=1753128201]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 134.0
+offset_right = 1178.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("1_mggpi")
+theme_override_font_sizes/font_size = 50
+text = "INSTRUCTIONS
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1856362629]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 246.0
+offset_right = 751.0
+offset_bottom = 319.0
+theme_override_fonts/font = ExtResource("1_mggpi")
+theme_override_font_sizes/font_size = 25
+text = "•PLACEHOLDER LANG PO
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=91513015]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 298.0
+offset_right = 753.0
+offset_bottom = 371.0
+theme_override_fonts/font = ExtResource("1_mggpi")
+theme_override_font_sizes/font_size = 25
+text = "•PLACEHOLDER LANG PO
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=2073025925]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 354.0
+offset_right = 755.0
+offset_bottom = 427.0
+theme_override_fonts/font = ExtResource("1_mggpi")
+theme_override_font_sizes/font_size = 25
+text = "•PLACEHOLDER LANG PO
+"
+horizontal_alignment = 1
+vertical_alignment = 1

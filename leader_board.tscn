@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bfl87dwkyfkpd"]
+
+[ext_resource type="Texture2D" uid="uid://dsqexxg6lo6fw" path="res://GAME/download.jpg" id="1_xvw5l"]
+[ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="1_yx86l"]
+[ext_resource type="Script" uid="uid://espaaldve0xf" path="res://button.gd" id="2_xvw5l"]
+
+[node name="LeaderBoard" type="Control" unique_id=1525929913]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1043835100]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 1150.0
+offset_bottom = 649.0
+texture = ExtResource("1_xvw5l")
+expand_mode = 2
+
+[node name="TitleLabel" type="Label" parent="." unique_id=910542426]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 53.0
+offset_right = 693.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 1, 0.54901963, 1)
+theme_override_fonts/font = ExtResource("1_yx86l")
+theme_override_font_sizes/font_size = 35
+text = "LEADERBOARD"
+
+[node name="Player1Label" type="Label" parent="TitleLabel" unique_id=634636487]
+layout_mode = 0
+offset_left = -106.0
+offset_top = 145.0
+offset_right = 74.0
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("1_yx86l")
+theme_override_font_sizes/font_size = 20
+text = "Player
+ 1 
+ -0000 PTS"
+
+[node name="Player2Label" type="Label" parent="." unique_id=1248684862]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 221.0
+offset_right = 821.0
+offset_bottom = 287.0
+theme_override_fonts/font = ExtResource("1_yx86l")
+theme_override_font_sizes/font_size = 20
+text = "Player
+ 2 
+- 0000 PTS"
+
+[node name="Player3Label" type="Label" parent="." unique_id=300094630]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 308.0
+offset_right = 512.0
+offset_bottom = 374.0
+theme_override_fonts/font = ExtResource("1_yx86l")
+theme_override_font_sizes/font_size = 20
+text = "Player 
+3 
+- 0000 PTS"
+
+[node name="Button" type="Button" parent="." unique_id=1634991076]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 502.0
+offset_right = 613.0
+offset_bottom = 533.0
+theme_override_fonts/font = ExtResource("1_yx86l")
+toggle_mode = true
+button_pressed = true
+action_mode = 0
+text = "BACK TO MENU"
+script = ExtResource("2_xvw5l")

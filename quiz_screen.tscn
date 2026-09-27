@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dpp2yrg8703bn"]
+
+[node name="QuizScreen" type="Control" unique_id=2084215695]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=138108250]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 1149.0
+offset_bottom = 645.0
+
+[node name="QUESTION" type="Label" parent="." unique_id=1538939039]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 115.0
+offset_right = 943.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 36
+text = "How many days are there in on e week?"
+
+[node name="ChoiceAButton" type="Button" parent="QUESTION" unique_id=187908804]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 216.0
+offset_right = 436.0
+offset_bottom = 247.0
+text = "A. 5"
+
+[node name="ChoiceBButton" type="Button" parent="QUESTION/ChoiceAButton" unique_id=1312199828]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 2.2900002
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 221.0
+offset_bottom = 9.0099945
+text = "B. 6"
+
+[node name="ChoiceCButton" type="Button" parent="QUESTION/ChoiceAButton/ChoiceBButton" unique_id=795366932]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.97300005
+offset_left = -1.0
+offset_top = 42.0
+offset_right = 6.939987
+offset_bottom = 73.0
+text = "C. 7"
+
+[node name="ChoiceCButton" type="Button" parent="QUESTION/ChoiceAButton/ChoiceBButton/ChoiceCButton" unique_id=1962720034]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 48.0
+offset_right = 224.0
+offset_bottom = 79.0
+text = "D. 7
+"

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/FishingController.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Bobber.tscn" id="3"]
+
+[sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="2"]
+radius = 0.35
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(0.95, 0.5, 0.1, 1)
+
+[sub_resource type="CylinderMesh" id="4"]
+top_radius = 0.015
+bottom_radius = 0.02
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="5"]
+albedo_color = Color(0.35, 0.22, 0.1, 1)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("1")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("3")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+current = true
+
+[node name="RodPivot" type="Node3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.35, -0.6)
+
+[node name="RodMesh" type="MeshInstance3D" parent="CameraPivot/RodPivot"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0, 0)
+mesh = SubResource("4")
+surface_material_override/0 = SubResource("5")
+
+[node name="RodTip" type="Node3D" parent="CameraPivot/RodPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62, 0.75, -0.62)
+
+[node name="FishingController" type="Node3D" parent="."]
+script = ExtResource("2")
+bobber_scene = ExtResource("3")
+water_y = -0.15
+rod_tip_path = NodePath("../CameraPivot/RodPivot/RodTip")

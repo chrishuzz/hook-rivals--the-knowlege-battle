@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://drofhuvnc27tu"]
+
+[ext_resource type="Texture2D" uid="uid://i4svh11lghv2" path="res://GAME/cab6c1d2-198e-442a-acd5-e4ca8527d7e0.jpg" id="1_rdc64"]
+[ext_resource type="Texture2D" uid="uid://mcj3k8waycr4" path="res://GAME/PLACEHOLDER CHARC.png" id="2_vdpoa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4tws"]
+atlas = ExtResource("2_vdpoa")
+region = Rect2(1024, 384, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3o0a"]
+atlas = ExtResource("2_vdpoa")
+region = Rect2(1152, 384, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w7th"]
+atlas = ExtResource("2_vdpoa")
+region = Rect2(1280, 384, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4tws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3o0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w7th")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control" unique_id=195296247]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=310272662]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_rdc64")
+
+[node name="WaterMovement (TextureRect)" type="TextureRect" parent="TextureRect" unique_id=258354695]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1977090546]
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=90808200]
+
+[node name="UI (Control)" type="Control" parent="Node2D/Node2D" unique_id=1995613636]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=440970920]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=650779829]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1362191159]
+position = Vector2(536, 705)
+scale = Vector2(2.0185184, 2.234375)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+frame_progress = 0.3802757

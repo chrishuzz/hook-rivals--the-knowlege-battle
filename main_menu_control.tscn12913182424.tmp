@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://3av7j3rpx2x7"]
+
+[ext_resource type="Script" uid="uid://dmooddavjksu2" path="res://main_menu_control.gd" id="1_utvg7"]
+[ext_resource type="Script" uid="uid://btqtymqtkqdrq" path="res://start_button.gd" id="2_makkp"]
+[ext_resource type="FontFile" uid="uid://dvml0brgn15u3" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf" id="3_1rgl0"]
+[ext_resource type="Script" uid="uid://d1xjavqwsy3x6" path="res://exit_button.gd" id="3_gf6c3"]
+[ext_resource type="FontFile" uid="uid://yx6fnhehbjxo" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Black.ttf" id="4_gf6c3"]
+
+[node name="MainMenuControl" type="Control" unique_id=404102864]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_utvg7")
+
+[node name="StartButton" type="Button" parent="." unique_id=268134863]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 361.0
+offset_right = 669.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "START"
+script = ExtResource("2_makkp")
+
+[node name="ExitButton" type="Button" parent="." unique_id=1661960972]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 434.0
+offset_right = 672.0
+offset_bottom = 488.0
+theme_override_font_sizes/font_size = 32
+text = "EXIT
+"
+script = ExtResource("3_gf6c3")
+
+[node name="QuestLabel" type="Label" parent="." unique_id=1949696823]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 129.0
+offset_right = 658.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("3_1rgl0")
+theme_override_font_sizes/font_size = 45
+text = "QUEST
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="." unique_id=369766859]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 51.0
+offset_right = 1013.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("4_gf6c3")
+theme_override_font_sizes/font_size = 45
+text = "Hook Rivals: The Knowlege Battle"
+horizontal_alignment = 1
+vertical_alignment = 1

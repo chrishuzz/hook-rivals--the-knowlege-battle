@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ddioh278nft1r"]
+
+[ext_resource type="Texture2D" uid="uid://bt3ig3gwhjry" path="res://GAME/bc.jpg" id="1_mbaq1"]
+[ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="1_t7k8q"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
+
+[node name="AreaSelection" type="Control" unique_id=2047528491]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=404806295]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 645.0
+texture = SubResource("ImageTexture_g4v7s")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=566051264]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1146.0
+offset_bottom = 764.0
+texture = ExtResource("1_mbaq1")
+expand_mode = 2
+
+[node name="ChooseYourFishingArea" type="Label" parent="." unique_id=1669779027]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.115
+anchor_top = 0.134
+anchor_right = 0.115
+anchor_bottom = 0.134
+offset_left = 186.52
+offset_top = -45.832
+offset_right = 689.52
+offset_bottom = 33.168
+theme_override_fonts/font = ExtResource("1_t7k8q")
+theme_override_font_sizes/font_size = 41
+text = "Choose Your Fishing Area"
+
+[node name="ShoreButton" type="Button" parent="." unique_id=1903363608]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 332.0
+offset_right = 651.0
+offset_bottom = 393.0
+theme_override_fonts/font = ExtResource("1_t7k8q")
+theme_override_font_sizes/font_size = 26
+text = "Shore - x1.0"
+
+[node name="ReefButton" type="Button" parent="ShoreButton" unique_id=318782264]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 74.0
+offset_right = 174.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("1_t7k8q")
+theme_override_font_sizes/font_size = 29
+text = "Reef - x1.5"
+
+[node name="DeepSeaButton" type="Button" parent="ShoreButton/ReefButton" unique_id=427238410]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 173.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("1_t7k8q")
+theme_override_font_sizes/font_size = 22
+text = "Deep Sea - x2.0"
