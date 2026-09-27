@@ -1,9 +1,37 @@
 [gd_scene format=3 uid="uid://o0ukgb4effef"]
 
+[ext_resource type="Texture2D" uid="uid://dsq5a1mpu785g" path="res://GAME/REEF MAP.jpg" id="1_f68mo"]
+[ext_resource type="Script" uid="uid://whj5l433vll7" path="res://exit.gd" id="3_l3yyl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1118, 31)
+
 [node name="reef" type="Control" unique_id=125359490]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ReefMap" type="Sprite2D" parent="." unique_id=1021560901]
+position = Vector2(576.5, 325.64914)
+scale = Vector2(0.84283626, 0.8428363)
+texture = ExtResource("1_f68mo")
+
+[node name="zone trigger" type="Area2D" parent="." unique_id=1962407700]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone trigger" unique_id=875180412]
+position = Vector2(580, 628)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="EXIT" type="Button" parent="." unique_id=1976409951]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 180.0
+offset_bottom = 61.0
+text = "BACK"
+script = ExtResource("3_l3yyl")

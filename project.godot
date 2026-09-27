@@ -15,6 +15,11 @@ run/main_scene="uid://3av7j3rpx2x7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ZoneTrigger="*uid://cl42i4kg7y3ha"
+ZoneManager="*uid://qntmtcf22uaq"
+
 [display]
 
 window/stretch/mode="canvas_items"

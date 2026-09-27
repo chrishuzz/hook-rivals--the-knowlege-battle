@@ -1,26 +1,9 @@
 [gd_scene format=3 uid="uid://3av7j3rpx2x7"]
 
-[ext_resource type="Texture2D" uid="uid://cb66xb17ouk6j" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/PLACEHOLDER.jpg" id="2_gf6c3"]
+[ext_resource type="Texture2D" uid="uid://bsk6j7ba4ani7" path="res://MAIN MENU/123.jpg" id="1_makkp"]
 [ext_resource type="Script" uid="uid://bvxf7l3udadxm" path="res://start_button.gd" id="2_makkp"]
 [ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="3_b47yg"]
 [ext_resource type="FontFile" uid="uid://cf303gfedej0h" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/Connection.otf" id="4_makkp"]
-[ext_resource type="Script" uid="uid://da1nosdrte03t" path="res://title_label.gd" id="5_1rgl0"]
-
-[sub_resource type="FontFile" id="FontFile_gf6c3"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [node name="MainMenuControl" type="Control" unique_id=404102864]
 layout_mode = 3
@@ -38,7 +21,7 @@ offset_left = 4.0
 offset_top = 5.0
 offset_right = 1150.0
 offset_bottom = 647.0
-texture = ExtResource("2_gf6c3")
+texture = ExtResource("1_makkp")
 expand_mode = 1
 
 [node name="StartButton" type="Button" parent="." unique_id=268134863]
@@ -76,9 +59,5 @@ offset_right = 855.2961
 offset_bottom = 249.13806
 theme_override_fonts/font = ExtResource("4_makkp")
 theme_override_font_sizes/font_size = 35
-text = ""
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("5_1rgl0")
-text = ""
-font = SubResource("FontFile_gf6c3")

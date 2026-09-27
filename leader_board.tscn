@@ -50,10 +50,10 @@ text = "Player
 
 [node name="Player2Label" type="Label" parent="." unique_id=1248684862]
 layout_mode = 0
-offset_left = 641.0
-offset_top = 221.0
-offset_right = 821.0
-offset_bottom = 287.0
+offset_left = 645.0
+offset_top = 195.0
+offset_right = 825.0
+offset_bottom = 261.0
 theme_override_fonts/font = ExtResource("1_yx86l")
 theme_override_font_sizes/font_size = 20
 text = "Player
