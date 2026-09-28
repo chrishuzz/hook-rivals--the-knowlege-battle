@@ -1,26 +1,127 @@
 [gd_scene format=3 uid="uid://drofhuvnc27tu"]
 
 [ext_resource type="Texture2D" uid="uid://ciebjibjm147q" path="res://GAME/MAP SHORE.jpg" id="1_rdc64"]
+[ext_resource type="Texture2D" uid="uid://ptqcuugplkxq" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_fish.png" id="2_4w7th"]
 [ext_resource type="Script" uid="uid://whj5l433vll7" path="res://exit.gd" id="2_vdpoa"]
+[ext_resource type="Texture2D" uid="uid://cg54qet6omy5o" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_idle.png" id="3_166qr"]
+[ext_resource type="Texture2D" uid="uid://308q8yani7qy" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_hook.png" id="4_7ormo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 50.159744
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cbqv"]
+atlas = ExtResource("2_4w7th")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjqwb"]
+atlas = ExtResource("2_4w7th")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u8fm"]
+atlas = ExtResource("2_4w7th")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvunj"]
+atlas = ExtResource("2_4w7th")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sdtc"]
+atlas = ExtResource("3_166qr")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmkwd"]
+atlas = ExtResource("3_166qr")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug5em"]
+atlas = ExtResource("3_166qr")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvudj"]
+atlas = ExtResource("3_166qr")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g58o2"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28lop"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjcb3"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0q3v"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfpjd"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlt70"]
+atlas = ExtResource("4_7ormo")
+region = Rect2(240, 0, 48, 48)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cbqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjqwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u8fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvunj")
+}],
 "loop": 1,
-"name": &"back",
+"name": &"FISHING",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sdtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmkwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug5em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvudj")
+}],
 "loop": 1,
-"name": &"front",
+"name": &"IDLE",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g58o2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28lop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjcb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0q3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfpjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlt70")
+}],
 "loop": 1,
-"name": &"side",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -61,11 +162,11 @@ position = Vector2(225, 362)
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1362191159]
-position = Vector2(607, 501)
-scale = Vector2(1.0707653, 1.0581862)
+position = Vector2(256, 319)
+scale = Vector2(3.8270493, 3.8624263)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
-animation = &"front"
-frame_progress = 0.9501382
+animation = &"FISHING"
+frame_progress = 0.9071908
 
 [node name="Button" type="Button" parent="." unique_id=143831201]
 layout_mode = 0

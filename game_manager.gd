@@ -1,4 +1,3 @@
-
 extends Node
 
 enum Difficulty { EASY, MEDIUM, HARD }
@@ -8,14 +7,10 @@ var score: int = 0
 var timer_remaining: float = 90.0
 
 var question_paths := {
-	Difficulty.EASY: [],
-	Difficulty.MEDIUM: [],
-	Difficulty.HARD: []
+	Difficulty.EASY: [], Difficulty.MEDIUM: [], Difficulty.HARD: []
 }
 var used_paths := {
-	Difficulty.EASY: [],
-	Difficulty.MEDIUM: [],
-	Difficulty.HARD: []
+	Difficulty.EASY: [], Difficulty.MEDIUM: [], Difficulty.HARD: []
 }
 
 func _ready():
@@ -52,6 +47,4 @@ func get_random_question_scene(difficulty: Difficulty) -> String:
 
 func reset_run():
 	score = 0
-	timer_remaining = 90.0
-	for d in used_paths.keys():
-		used_paths[d].clear()
+	timer_remaining = 10
