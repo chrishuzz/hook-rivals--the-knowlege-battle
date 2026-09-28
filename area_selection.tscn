@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ddioh278nft1r"]
 
 [ext_resource type="Texture2D" uid="uid://cso3sflxxf2xy" path="res://GAME/456.jpg" id="1_mbaq1"]
-[ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="1_t7k8q"]
 [ext_resource type="Script" uid="uid://cadgx3xaxjsd" path="res://shore_button.gd" id="3_whhpt"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
@@ -41,7 +40,6 @@ offset_left = -105.479996
 offset_top = 14.167999
 offset_right = 173.52
 offset_bottom = 101.168
-theme_override_fonts/font = ExtResource("1_t7k8q")
 theme_override_font_sizes/font_size = 41
 text = "HOW TO PLAY?
 "
@@ -52,7 +50,6 @@ offset_left = 477.0
 offset_top = 474.0
 offset_right = 649.0
 offset_bottom = 535.0
-theme_override_fonts/font = ExtResource("1_t7k8q")
 theme_override_font_sizes/font_size = 26
 text = "ENTER GAME"
 script = ExtResource("3_whhpt")

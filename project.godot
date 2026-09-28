@@ -17,8 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ZoneTrigger="*uid://cl42i4kg7y3ha"
-ZoneManager="*uid://qntmtcf22uaq"
+GameManager="*uid://dga6f2oceqidm"
 
 [display]
 
