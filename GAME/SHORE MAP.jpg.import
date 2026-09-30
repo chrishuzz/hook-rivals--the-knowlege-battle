@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ditly6fcy7pg6"
-path="res://.godot/imported/SHORE MAP.jpg-630b2168132c1f3716b86ee9bc24b15b.ctex"
+path="res://.godot/imported/SHORE MAP.jpg-4a4b694ea878f39c95659575cae61e64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/SHORE MAP.jpg"
-dest_files=["res://.godot/imported/SHORE MAP.jpg-630b2168132c1f3716b86ee9bc24b15b.ctex"]
+source_file="res://SHORE MAP.jpg"
+dest_files=["res://.godot/imported/SHORE MAP.jpg-4a4b694ea878f39c95659575cae61e64.ctex"]
 
 [params]
 

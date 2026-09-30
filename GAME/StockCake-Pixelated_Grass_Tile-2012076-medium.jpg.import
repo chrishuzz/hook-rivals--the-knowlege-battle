@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp2as8ieo5mun"
-path="res://.godot/imported/StockCake-Pixelated_Grass_Tile-2012076-medium.jpg-ca0a3dedc712ebbe1f4837e312ac0aa6.ctex"
+path="res://.godot/imported/StockCake-Pixelated_Grass_Tile-2012076-medium.jpg-95807c449a8eb6fcc0a3767d5a633739.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/StockCake-Pixelated_Grass_Tile-2012076-medium.jpg"
-dest_files=["res://.godot/imported/StockCake-Pixelated_Grass_Tile-2012076-medium.jpg-ca0a3dedc712ebbe1f4837e312ac0aa6.ctex"]
+source_file="res://StockCake-Pixelated_Grass_Tile-2012076-medium.jpg"
+dest_files=["res://.godot/imported/StockCake-Pixelated_Grass_Tile-2012076-medium.jpg-95807c449a8eb6fcc0a3767d5a633739.ctex"]
 
 [params]
 

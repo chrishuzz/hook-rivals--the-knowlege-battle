@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gk8nm7bnf72f"
-path="res://.godot/imported/DEEPSEA.jpg-fbe43c562b5e20cc6d281961ec819957.ctex"
+path="res://.godot/imported/DEEPSEA.jpg-82341a6d7681ac274cac85e3b331a298.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/DEEPSEA.jpg"
-dest_files=["res://.godot/imported/DEEPSEA.jpg-fbe43c562b5e20cc6d281961ec819957.ctex"]
+source_file="res://DEEPSEA.jpg"
+dest_files=["res://.godot/imported/DEEPSEA.jpg-82341a6d7681ac274cac85e3b331a298.ctex"]
 
 [params]
 

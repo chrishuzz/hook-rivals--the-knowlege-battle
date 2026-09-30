@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dstbn25lqbrjf"
-path="res://.godot/imported/PLACEHOLDER ISLAND.jpg-33ae7875951f4f0d12a8591edb8a371c.ctex"
+path="res://.godot/imported/PLACEHOLDER ISLAND.jpg-e555ed6bb7fab3693a7ea9746bae5f9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/PLACEHOLDER ISLAND.jpg"
-dest_files=["res://.godot/imported/PLACEHOLDER ISLAND.jpg-33ae7875951f4f0d12a8591edb8a371c.ctex"]
+source_file="res://PLACEHOLDER ISLAND.jpg"
+dest_files=["res://.godot/imported/PLACEHOLDER ISLAND.jpg-e555ed6bb7fab3693a7ea9746bae5f9f.ctex"]
 
 [params]
 

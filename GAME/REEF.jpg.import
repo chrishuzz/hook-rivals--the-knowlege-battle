@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crlxxari6mas5"
-path="res://.godot/imported/REEF.jpg-e0e584d4932a0aef07a3d436d39daa9a.ctex"
+path="res://.godot/imported/REEF.jpg-6ea1ef957f505c17b7cf164c549c6c7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/REEF.jpg"
-dest_files=["res://.godot/imported/REEF.jpg-e0e584d4932a0aef07a3d436d39daa9a.ctex"]
+source_file="res://REEF.jpg"
+dest_files=["res://.godot/imported/REEF.jpg-6ea1ef957f505c17b7cf164c549c6c7e.ctex"]
 
 [params]
 

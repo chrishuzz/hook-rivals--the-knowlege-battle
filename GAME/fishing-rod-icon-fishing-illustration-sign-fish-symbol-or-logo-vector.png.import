@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlliqd3116ova"
-path="res://.godot/imported/fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png-919c3bc4c1c4c114b581a55a3dcc43ce.ctex"
+path="res://.godot/imported/fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png-89d6a16ef42eef80a699df39190e5b2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png"
-dest_files=["res://.godot/imported/fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png-919c3bc4c1c4c114b581a55a3dcc43ce.ctex"]
+source_file="res://fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png"
+dest_files=["res://.godot/imported/fishing-rod-icon-fishing-illustration-sign-fish-symbol-or-logo-vector.png-89d6a16ef42eef80a699df39190e5b2e.ctex"]
 
 [params]
 
