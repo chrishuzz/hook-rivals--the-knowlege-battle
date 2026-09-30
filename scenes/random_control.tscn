@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://kc35hvhtqaui"]
+
+[ext_resource type="Texture2D" uid="uid://dffnyysnorx67" path="res://assets/456.jpg" id="1_5gp6g"]
+[ext_resource type="Script" uid="uid://3jcikn7erqpq" path="res://scenes/enter_button.gd" id="2_llmk5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.103743516, 0.103743546, 0.10374347, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13qdw"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7l7n"]
+draw_center = false
+
+[node name="RandomControl" type="Control" unique_id=2097787243]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgrooundTextureRect" type="TextureRect" parent="." unique_id=1320964366]
+modulate = Color(0.27022192, 0.27022192, 0.2702219, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 478.0
+offset_bottom = 274.0
+texture = ExtResource("1_5gp6g")
+expand_mode = 2
+
+[node name="TtileLabel" type="Label" parent="." unique_id=1734626747]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 392.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 10
+text = "RANDOM QUESTIONS FROM THESE CATEGORIES
+
+"
+
+[node name="SubjectsLabel" type="Label" parent="." unique_id=1254919302]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 392.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 10
+text = "🗺️ Geography
+🔬 Science
+🏛️ History
+💻 Technology
+🌱 Environment
+ Philippine Culture & General Knowledge
+🧠 Logic & Common Knowledge
+🎨 Art
+➗ Mathematics
+"
+
+[node name="EnterButton" type="Button" parent="." unique_id=754528301]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 226.0
+offset_right = 301.0
+offset_bottom = 254.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u7l7n")
+text = "ENTER"
+script = ExtResource("2_llmk5")

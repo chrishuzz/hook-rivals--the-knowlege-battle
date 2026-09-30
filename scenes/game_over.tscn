@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dyxdc227360t7"]
+
+[ext_resource type="Script" uid="uid://dysm8xmvexuqa" path="res://scripts/game_over.gd" id="1"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1225464525]
+layer = 20
+visible = false
+script = ExtResource("1")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1047802184]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=77688993]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -85.0
+offset_right = 160.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=1446936290]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin" unique_id=347505393]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleLabel" type="Label" parent="Panel/Margin/VBox" unique_id=512191674]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.42, 0.42, 1)
+theme_override_font_sizes/font_size = 16
+text = "TIME'S UP!"
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="Panel/Margin/VBox" unique_id=553125024]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.85, 1, 1)
+text = "PLAYER"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel/Margin/VBox" unique_id=2066160373]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.3, 1)
+theme_override_font_sizes/font_size = 16
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="StatsLabel" type="Label" parent="Panel/Margin/VBox" unique_id=1913467824]
+layout_mode = 2
+text = "WORDS: 0   FISH: 0"
+horizontal_alignment = 1
+
+[node name="RankLabel" type="Label" parent="Panel/Margin/VBox" unique_id=478564115]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Margin/VBox" unique_id=1004233117]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="AgainButton" type="Button" parent="Panel/Margin/VBox/Buttons" unique_id=2107097067]
+custom_minimum_size = Vector2(96, 20)
+layout_mode = 2
+text = "PLAY AGAIN"
+
+[node name="BoardButton" type="Button" parent="Panel/Margin/VBox/Buttons" unique_id=697670673]
+custom_minimum_size = Vector2(96, 20)
+layout_mode = 2
+text = "SCORES"
+
+[node name="MenuButton" type="Button" parent="Panel/Margin/VBox/Buttons" unique_id=1551975571]
+custom_minimum_size = Vector2(72, 20)
+layout_mode = 2
+text = "MENU"

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dx0xly7cve73u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_po0nb"]
+load_path = "res://.godot/imported/MAP.jpg-da2ab3633555fac12a840623a89b9fe9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oabld"]
+load_path = "res://.godot/imported/waves.png-eaf24c5101f895533f4d0df7d131e1c8.ctex"
+
+[node name="Background" type="Node2D" unique_id=1108156439]
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=790831603]
+z_index = -10
+scale = Vector2(0.3508772, 0.3502604)
+texture = SubResource("CompressedTexture2D_po0nb")
+centered = false
+
+[node name="Waves" type="Sprite2D" parent="." unique_id=425882472]
+visible = false
+z_index = 3
+position = Vector2(1, 119)
+scale = Vector2(2.3225806, 2.6)
+texture = SubResource("CompressedTexture2D_oabld")
+centered = false

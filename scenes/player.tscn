@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b6ogiskijxydx"]
+
+[ext_resource type="Script" uid="uid://ccl0ujpyuwtty" path="res://scripts/player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://1ono4hhqf0pw" path="res://assets/mang aton.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://bui1iarbneld" path="res://assets/hook.png" id="3"]
+
+[node name="Player" type="Node2D" unique_id=1780308206]
+z_index = 2
+script = ExtResource("1")
+
+[node name="MangAton" type="Sprite2D" parent="." unique_id=686829148]
+position = Vector2(9.75, 0.9999982)
+scale = Vector2(0.051225923, 0.045258626)
+texture = ExtResource("2_qhqgy")
+
+[node name="RodTip" type="Marker2D" parent="MangAton" unique_id=2123755857]
+position = Vector2(426.443, -262.26093)
+scale = Vector2(28.91139, 40.34783)
+
+[node name="Line" type="Line2D" parent="MangAton/RodTip" unique_id=1982130787]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0.92, 0.95, 1, 1)
+
+[node name="Hook" type="Sprite2D" parent="MangAton/RodTip" unique_id=1316288201]
+position = Vector2(0, 5)
+texture = ExtResource("3")

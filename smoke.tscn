@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://drldcj1lq8onf"]
+
+[sub_resource type="GDScript" id="GDScript_s8tqw"]
+script/source = "extends Node
+## Headless smoke test (not needed for the game itself). Run:
+##   godot --headless --path . res://tests/smoke.tscn
+
+var failures := 0
+
+func check(cond: bool, msg: String) -> void:
+	print((\"PASS  \" if cond else \"FAIL  \") + msg)
+	if not cond: failures += 1
+
+func frames(n: int) -> void:
+	for i in n: await get_tree().process_frame
+
+func _ready() -> void:
+	await get_tree().process_frame
+	DirAccess.remove_absolute(\"user://leaderboard.json\")
+	Global.scores = []
+	Global.set_player_name(\"TESTER\")
+	check(Global.player_name == \"TESTER\", \"name stored\")
+
+	# ---- name entry / menu / leaderboard scenes instantiate
+	for p in [\"name_entry\", \"main_menu\", \"leaderboard\"]:
+		var s: Node = load(\"res://scenes/%s.tscn\" % p).instantiate()
+		add_child(s); await frames(2)
+		check(is_instance_valid(s), p + \" scene loads\")
+		s.queue_free(); await frames(1)
+
+	# ---- gameplay
+	var g: Node = load(\"res://scenes/game.tscn\").instantiate()
+	add_child(g); await frames(5)
+	check(g.fishes.get_child_count() > 0, \"fish spawned (%d)\" % g.fishes.get_child_count())
+	var needed: String = g.word[0]
+	var target: Fish = null
+	for f in g.fishes.get_children():
+		if f.letter == needed: target = f
+	check(target != null, \"needed letter '%s' is swimming\" % needed)
+	# park the target fish right under the hook, then drop
+	target.speed = 0.0
+	target.position = Vector2(g.player.rod_tip.global_position.x, 150.0)
+	target._base_y = 150.0
+	g._start_drop()
+	var guard := 0
+	while not get_tree().paused and guard < 600:
+		await get_tree().process_frame; guard += 1
+	check(get_tree().paused and g.popup.visible, \"question popup opened after reeling the fish in\")
+	await get_tree().create_timer(0.5, true).timeout
+	g.popup._on_pressed(g.popup._correct_index)          # answer correctly
+	await get_tree().create_timer(1.3, true).timeout
+	check(not get_tree().paused, \"game resumed after answering\")
+	check(g.score == 12, \"score = 2 letter + 10 easy bonus (got %d)\" % g.score)
+	check(g.letter_index == 1, \"letter advanced\")
+	check(g.questions_asked == 1, \"question counted\")
+
+	# ---- tiers
+	g.questions_asked = 5;  check(g._tier() == 1, \"tier 1 at 5 questions\")
+	g.questions_asked = 12; check(g._tier() == 2, \"tier 2 at 12 questions\")
+	for t in 3:
+		var q: Dictionary = Global.get_question(t)
+		check(q.has(\"q\") and q[\"options\"].size() == 4, \"question tier %d ok: %s\" % [t, q[\"q\"]])
+
+	# ---- finish word -> bonus
+	g.questions_asked = 0
+	var before: int = g.score
+	g.letter_index = g.word.length() - 1
+	var last_letter: String = g.word[g.letter_index]
+	var fake: Fish = load(\"res://scenes/fish.tscn\").instantiate()
+	g.fishes.add_child(fake); fake.setup(last_letter, 0, 0.0, 1)
+	g._resolve_catch(fake, true, 0)
+	check(g.words_done == 1 and g.score > before + 12, \"word completion bonus (score %d)\" % g.score)
+
+	# ---- wrong fish + wrong answer penalty
+	var s2: int = g.score
+	var wrong: Fish = load(\"res://scenes/fish.tscn\").instantiate()
+	g.fishes.add_child(wrong)
+	wrong.setup(\"#\", 0, 0.0, 1)
+	g._resolve_catch(wrong, false, 0)
+	check(g.score == maxi(0, s2 - 15), \"wrong fish + wrong answer = -15\")
+
+	# ---- time out -> leaderboard
+	g.time_left = 0.05
+	await get_tree().create_timer(0.4).timeout
+	check(g.game_over.visible, \"game over panel shown\")
+	check(Global.scores.size() == 1 and Global.scores[0][\"name\"] == \"TESTER\", \"score saved under player name\")
+	check(Global.last_rank == 1, \"rank 1\")
+
+	# second player, lower score
+	Global.set_player_name(\"ANNA\"); Global.add_score(3, 0, 1)
+	Global.set_player_name(\"BOB\");  Global.add_score(500, 4, 9)
+	check(Global.scores[0][\"name\"] == \"BOB\" and Global.scores[2][\"name\"] == \"ANNA\", \"leaderboard sorted\")
+	Global._load_scores()
+	check(Global.scores.size() == 3, \"leaderboard persisted to disk\")
+	var lb: Node = load(\"res://scenes/leaderboard.tscn\").instantiate()
+	add_child(lb); await frames(2)
+	check(lb.grid.get_child_count() == 4 * 4, \"leaderboard grid rows (header + 3)\")
+
+	print(\"\\nRESULT: %s\" % (\"ALL OK\" if failures == 0 else \"%d FAILURES\" % failures))
+	get_tree().quit(failures)
+"
+
+[node name="Smoke" type="Node" unique_id=1544547094]
+script = SubResource("GDScript_s8tqw")

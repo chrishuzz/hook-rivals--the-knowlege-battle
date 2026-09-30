@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bfpsk5qx0n2eu"]
+
+[ext_resource type="Script" uid="uid://gqukfrtfvpo4" path="res://scripts/name_entry.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cbsedxnhb14px" path="res://scenes/main_menu_bc.tscn" id="2_n861w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srows"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hlwm"]
+bg_color = Color(0, 0, 0, 0.7411765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eancq"]
+bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.76862746)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsjbe"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbdkt"]
+bg_color = Color(0, 0, 0, 0.61960787)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_214n6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ocq7"]
+
+[node name="NameEntry" type="Node2D" unique_id=656273006]
+script = ExtResource("1")
+
+[node name="MAIN MENU BC" parent="." unique_id=291894739 instance=ExtResource("2_n861w")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=86881027]
+
+[node name="PromptLabel" type="Label" parent="UI" unique_id=890304623]
+offset_left = 120.0
+offset_top = 108.0
+offset_right = 360.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "ENTER YOUR NAME"
+horizontal_alignment = 1
+
+[node name="NameEdit" type="LineEdit" parent="UI" unique_id=269152080]
+custom_minimum_size = Vector2(0, 22)
+offset_left = 120.0
+offset_top = 123.0
+offset_right = 360.0
+offset_bottom = 145.0
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 0.5019608)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_srows")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3hlwm")
+placeholder_text = "TYPE HERE"
+alignment = 1
+max_length = 12
+
+[node name="ErrorLabel" type="Label" parent="UI" unique_id=1730470650]
+offset_left = 120.0
+offset_top = 152.0
+offset_right = 360.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(1, 0.42, 0.42, 1)
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="UI" unique_id=89854610]
+custom_minimum_size = Vector2(0, 22)
+offset_left = 172.0
+offset_top = 165.0
+offset_right = 311.0
+offset_bottom = 187.0
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_eancq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qsjbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nbdkt")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_214n6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0ocq7")
+text = "START"
+
+[node name="PromptLabel2" type="Label" parent="." unique_id=244288868]
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 480.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "hook rivals:the knowlege battle"
+horizontal_alignment = 1

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cbsedxnhb14px"]
+
+[ext_resource type="Texture2D" uid="uid://fqo6fu4pl27x" path="res://assets/123.jpg" id="1_00lra"]
+
+[node name="MAIN MENU BC" type="Node2D" unique_id=291894739]
+
+[node name="123" type="Sprite2D" parent="." unique_id=1272500410]
+position = Vector2(240.5, 135.5)
+scale = Vector2(0.46582034, 0.48555955)
+texture = ExtResource("1_00lra")

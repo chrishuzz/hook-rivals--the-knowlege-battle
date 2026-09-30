@@ -1,0 +1,368 @@
+{
+ "easy": [
+  {
+   "q": "How many days are there in one week?",
+   "options": [
+	"5",
+	"6",
+	"7",
+    "8"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "How many months are there in one year?",
+   "options": [
+	"10",
+	"11",
+	"12",
+    "13"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "Which animal is known as man's best friend?",
+   "options": [
+	"Dog",
+	"Horse",
+	"Car",
+    "Rabbit"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What comes after Monday?",
+   "options": [
+	"Sunday",
+	"Wednesday",
+	"Friday",
+    "Tuesday"
+   ],
+   "answer": 4
+  },
+  {
+   "q": " How many legs does a spider have?",
+   "options": [
+	"6",
+	"8",
+	"10",
+    "12"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "What do we use to tell time?",
+   "options": [
+	"Ruler",
+	"Scale",
+	"Clock",
+    "Compass"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "What is the opposite of hot?",
+   "options": [
+	"Warm",
+	"Cool",
+	"Cold",
+    "Dry"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "What is 10 - 4?",
+   "options": [
+	"5",
+	"6",
+	"7",
+    "4"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What do bees make?",
+   "options": [
+	"Milk",
+	"Silk",
+	"Honey",
+    "Sugar"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Which shape has 3 sides?",
+   "options": [
+	"Square",
+	"Circle",
+	"Triangle",
+    "Star"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "What is 3 x 3?",
+   "options": [
+	"6",
+	"9",
+	"12",
+    "33"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What do fish use to breathe underwater?",
+   "options": [
+	"Lungs",
+	"Gills",
+	"Nose",
+    "Fins"
+   ],
+   "answer": 1
+  }
+ ],
+ "medium": [
+  {
+   "q": "What is 8 x 7?",
+   "options": [
+	"54",
+	"56",
+	"63",
+    "48"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Which is the largest ocean on Earth?",
+   "options": [
+	"Atlantic",
+	"Indian",
+	"Arctic",
+    "Pacific"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "At what temperature (in C) does water boil?",
+   "options": [
+	"90",
+	"100",
+	"110",
+    "120"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What is the national flower of the Philippines?",
+   "options": [
+	"Rose",
+	"Sunflower",
+	"Sampaguita",
+    "Orchid"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Which gas do plants absorb from the air?",
+   "options": [
+	"Oxygen",
+	"Nitrogen",
+	"Carbon dioxide",
+    "Helium"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "How many continents are there?",
+   "options": [
+	"5",
+	"6",
+	"7",
+    "8"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Which planet is known as the Red Planet?",
+   "options": [
+	"Mars",
+	"Venus",
+	"Saturn",
+    "Mercury"
+   ],
+   "answer": 0
+  },
+  {
+   "q": "What is 144 / 12?",
+   "options": [
+	"10",
+	"11",
+	"12",
+    "14"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "What is the largest island in the Philippines?",
+   "options": [
+	"Mindanao",
+	"Luzon",
+	"Palawan",
+    "Cebu"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What is the chemical formula of water?",
+   "options": [
+	"CO2",
+	"H2O",
+	"O2",
+    "NaCl"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "How many hours are in two days?",
+   "options": [
+	"24",
+	"36",
+	"48",
+    "72"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Which animal is the largest mammal?",
+   "options": [
+	"Elephant",
+	"Blue whale",
+	"Giraffe",
+    "Shark"
+   ],
+   "answer": 1
+  }
+ ],
+ "hard": [
+  {
+   "q": "What is 15% of 200?",
+   "options": [
+	"15",
+	"20",
+	"25",
+    "30"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "What is the square root of 169?",
+   "options": [
+	"12",
+	"13",
+	"14",
+    "15"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Which element has the atomic number 1?",
+   "options": [
+	"Helium",
+	"Oxygen",
+	"Hydrogen",
+    "Carbon"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "In what year did the Philippines declare independence from Spain?",
+   "options": [
+	"1896",
+	"1898",
+	"1935",
+    "1946"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Which part of a plant cell carries out photosynthesis?",
+   "options": [
+	"Nucleus",
+	"Mitochondria",
+	"Chloroplast",
+    "Vacuole"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "What is 2 to the power of 10?",
+   "options": [
+	"512",
+	"1000",
+	"1024",
+    "2048"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Which is the only even prime number?",
+   "options": [
+	"0",
+	"2",
+	"4",
+    "6"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "What is the longest river in the Philippines?",
+   "options": [
+	"Pasig",
+	"Agusan",
+	"Pampanga",
+    "Cagayan"
+   ],
+   "answer": 3
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "options": [
+	"Go",
+	"Gd",
+	"Au",
+    "Ag"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "What is the deepest known part of the ocean?",
+   "options": [
+	"Sunda Trench",
+	"Mariana Trench",
+	"Puerto Rico Trench",
+    "Java Trench"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Who wrote the novel Noli Me Tangere?",
+   "options": [
+	"Andres Bonifacio",
+	"Emilio Aguinaldo",
+	"Jose Rizal",
+    "Apolinario Mabini"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Approximately how fast does light travel?",
+   "options": [
+	"300 km per second",
+	"3,000 km per second",
+	"300,000 km per second",
+    "3,000,000 km per second"
+   ],
+   "answer": 2
+  }
+ ]
+}

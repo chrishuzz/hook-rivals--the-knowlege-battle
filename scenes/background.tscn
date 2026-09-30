@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cmijd2klc6ma5"]
+
+[ext_resource type="Script" uid="uid://ds21gyflvck0a" path="res://scripts/background.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ddfl5ncdreewx" path="res://assets/waves.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cpyokre3n42dv" path="res://assets/MAP.jpg" id="3_jougr"]
+
+[node name="Background" type="Node2D" unique_id=1167614601]
+script = ExtResource("1")
+
+[node name="Waves" type="Sprite2D" parent="." unique_id=2105791179]
+visible = false
+z_index = 3
+position = Vector2(-2, 70)
+texture = ExtResource("3")
+centered = false
+
+[node name="Map" type="Sprite2D" parent="." unique_id=924323234]
+position = Vector2(239.75, 151.99994)
+scale = Vector2(0.34978068, 0.38802084)
+texture = ExtResource("3_jougr")

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://r2164tgp2swx"]
+
+[node name="QuestionPopup" type="CanvasLayer" unique_id=1911959990]
+process_mode = 3
+layer = 10
+visible = false
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1401634016]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.55)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1860719140]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -110.0
+offset_right = 210.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=1873524871]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin" unique_id=1570453576]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="TierLabel" type="Label" parent="Panel/Margin/VBox" unique_id=2037851097]
+layout_mode = 2
+text = "EASY QUESTION"
+horizontal_alignment = 1
+
+[node name="QuestionLabel" type="Label" parent="Panel/Margin/VBox" unique_id=439003967]
+custom_minimum_size = Vector2(390, 34)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.3, 1)
+text = "Question?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Answers" type="VBoxContainer" parent="Panel/Margin/VBox" unique_id=704969951]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="A1" type="Button" parent="Panel/Margin/VBox/Answers" unique_id=752589245]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+focus_mode = 0
+text = "1) answer"
+
+[node name="A2" type="Button" parent="Panel/Margin/VBox/Answers" unique_id=1924523095]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+focus_mode = 0
+text = "2) answer"
+
+[node name="A3" type="Button" parent="Panel/Margin/VBox/Answers" unique_id=90505619]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+focus_mode = 0
+text = "3) answer"
+
+[node name="A4" type="Button" parent="Panel/Margin/VBox/Answers" unique_id=2068011918]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+focus_mode = 0
+text = "4) answer"
+
+[node name="FeedbackLabel" type="Label" parent="Panel/Margin/VBox" unique_id=180125641]
+layout_mode = 2
+horizontal_alignment = 1

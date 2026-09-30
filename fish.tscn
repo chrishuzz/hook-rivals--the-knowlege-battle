@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cs485hcopgcpq"]
+
+[node name="Fish" type="Node2D" unique_id=1230826913]
+z_index = 1
+
+[node name="Body" type="Sprite2D" parent="." unique_id=365833380]
+
+[node name="Letter" type="Label" parent="." unique_id=1565864073]
+theme_override_colors/font_color = Color(0.1, 0.11, 0.17, 1)
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1

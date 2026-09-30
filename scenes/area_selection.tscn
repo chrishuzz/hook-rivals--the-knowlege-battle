@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ddioh278nft1r"]
+
+[ext_resource type="Texture2D" uid="uid://dffnyysnorx67" path="res://assets/456.jpg" id="1_1vjwq"]
+[ext_resource type="Script" uid="uid://cj8n2fct1qjaf" path="res://scenes/texture_progress_bar.gd" id="2_y7v1k"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
+
+[node name="HowtoplayControl" type="Control" unique_id=2047528491]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=404806295]
+layout_mode = 0
+offset_right = 478.0
+offset_bottom = 270.0
+texture = SubResource("ImageTexture_g4v7s")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=566051264]
+modulate = Color(0.38170326, 0.38170323, 0.38170323, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 481.0
+offset_bottom = 270.0
+texture = ExtResource("1_1vjwq")
+expand_mode = 2
+
+[node name="HowtoplaylAbel" type="Label" parent="." unique_id=1669779027]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.115
+anchor_top = 0.134
+anchor_right = 0.115
+anchor_bottom = 0.134
+offset_left = -47.2
+offset_top = -14.18
+offset_right = 444.8
+offset_bottom = 76.82
+theme_override_font_sizes/font_size = 20
+text = "HOW TO PLAY?
+"
+
+[node name="howtoplyaLabel" type="Label" parent="." unique_id=412249086]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 97.0
+offset_right = 380.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 10
+text = "1. Enter yor name
+2. Catch Fish
+3. Answer the quiz
+4. Correct answer earn points
+5. Complete levels to unlock new area
+6. Check your score and my record"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=945217329]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_y7v1k")
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureProgressBar" unique_id=1582946270]
+layout_mode = 0
+offset_top = 246.0
+offset_right = 480.0
+offset_bottom = 272.0
+indeterminate = true
+editor_preview_indeterminate = true

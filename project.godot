@@ -8,22 +8,33 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="MADEBYCRISSS"
-run/main_scene="uid://3av7j3rpx2x7"
+config/name="Catch That Fish - Quiz Edition"
+run/main_scene="res://scenes/name_entry.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://dga6f2oceqidm"
-Global="*uid://dqnv0jxhijs86"
+Global="*res://scripts/global.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="res://theme.tres"
 
 [physics]
 
@@ -31,8 +42,11 @@ window/stretch/aspect="expand"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.03, 0.12, 0.23, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

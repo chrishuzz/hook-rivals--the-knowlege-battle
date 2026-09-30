@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d16o3d437lspe"]
+
+[ext_resource type="Texture2D" uid="uid://dffnyysnorx67" path="res://assets/456.jpg" id="1_7xosm"]
+
+[node name="BC" type="Node2D" unique_id=1409581311]
+
+[node name="456" type="Sprite2D" parent="." unique_id=143976782]
+modulate = Color(0.585062, 0.585062, 0.5850621, 1)
+position = Vector2(238.75, 135.75)
+scale = Vector2(0.46728516, 0.46614584)
+texture = ExtResource("1_7xosm")

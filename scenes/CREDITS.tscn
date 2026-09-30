@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b4560sda3mvxq"]
+
+[ext_resource type="PackedScene" uid="uid://d16o3d437lspe" path="res://scenes/bc.tscn" id="1_thpfr"]
+
+[node name="Node2D" type="Node2D" unique_id=579044980]
+
+[node name="BC" parent="." unique_id=1409581311 instance=ExtResource("1_thpfr")]
+position = Vector2(1, -1)
+
+[node name="Label" type="Label" parent="." unique_id=759174251]
+offset_left = 2.0
+offset_top = 19.0
+offset_right = 225.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 5
+text = "
+LEADER — REYES, MA. CRISTINA N.
+
+PROJECT MANAGER — TANZO, CHRISTIAN DENNIS I.
+
+GAME DESIGNER — BARING, JAZEL MAE O.
+                DELFIN, KYLE JERALD M.
+                LEGASPI, ZAIRA MYCKHAELAH
+
+PROGRAMMERS — REYES, MA. CRISTINA N.
+              TANZO, CHRISTIAN DENNIS I."
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=246990664]
+offset_left = 199.0
+offset_top = 5.0
+offset_right = 269.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 10
+text = "
+CREDITS
+"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=2031564024]
+offset_left = 3.0
+offset_top = 147.0
+offset_right = 323.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 5
+text = "UI/UX DESIGNERS — REYES, MA. CRISTINA N.
+                  TANZO, CHRISTIAN DENNIS I.
+
+ASSET/GRAPHIC DESIGNER — TANZO, CHRISTIAN DENNIS I.
+
+AUDIO DESIGNER — ALL GROUP MEMBERS
+
+DOCUMENTATION — BARING, JAZEL MAE O.
+
+TESTER / QA — REYES, MA. CRISTINA N.
+                           "
+vertical_alignment = 1

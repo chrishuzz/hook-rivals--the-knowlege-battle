@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dcmvfna3vnnu2"]
+
+[sub_resource type="GDScript" id="GDScript_sh265"]
+script/source = "extends Node2D
+class_name Player
+
+@onready var boy: Sprite2D = $Boy
+@onready var rod_tip: Marker2D = $Boy/RodTip
+@onready var line: Line2D = $Boy/RodTip/Line
+@onready var hook: Sprite2D = $Boy/RodTip/Hook
+
+var depth: float = 0.0
+var _t: float = 0.0
+
+
+func set_depth(value: float) -> void:
+	depth = maxf(value, 0.0)
+	line.set_point_position(1, Vector2(0, depth))
+	hook.position = Vector2(0, depth + 5.0)
+
+
+func hook_rect() -> Rect2:
+	return Rect2(hook.global_position - Vector2(5, 6), Vector2(10, 12))
+
+
+func _process(delta: float) -> void:
+	_t += delta
+	boy.position.y = roundf(sin(_t * 2.2))
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4flbx"]
+load_path = "res://.godot/imported/mang aton.png-481de129886cb223e4cee0338bcefb3d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_onrkg"]
+load_path = "res://.godot/imported/hook.png-cba43e37e233958ed05d1097c3907559.ctex"
+
+[node name="Player" type="Node2D" unique_id=770695599]
+z_index = 2
+position = Vector2(95, 113)
+script = SubResource("GDScript_sh265")
+
+[node name="Boy" type="Sprite2D" parent="." unique_id=46558738]
+position = Vector2(75.00001, 85)
+scale = Vector2(0.128, 0.131)
+texture = SubResource("CompressedTexture2D_4flbx")
+
+[node name="RodTip" type="Marker2D" parent="Boy" unique_id=1701747771]
+position = Vector2(15, -8)
+
+[node name="Line" type="Line2D" parent="Boy/RodTip" unique_id=599411626]
+position = Vector2(500.62497, -331.69464)
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0.92, 0.95, 1, 1)
+
+[node name="Hook" type="Sprite2D" parent="Boy/RodTip" unique_id=1764428245]
+position = Vector2(492.8125, -297.34344)
+scale = Vector2(4.484375, 5.761841)
+texture = SubResource("CompressedTexture2D_onrkg")
