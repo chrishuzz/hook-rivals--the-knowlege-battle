@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3av7j3rpx2x7"]
 
 [ext_resource type="Texture2D" uid="uid://bsk6j7ba4ani7" path="res://MAIN MENU/123.jpg" id="1_makkp"]
+[ext_resource type="FontFile" uid="uid://bk0eov24ndrwu" path="res://MAIN MENU/PressStart2P.ttf" id="2_b47yg"]
 [ext_resource type="Script" uid="uid://bvxf7l3udadxm" path="res://start_button.gd" id="2_makkp"]
 [ext_resource type="Script" uid="uid://cvey32ma0ency" path="res://NameEntry.gd" id="3_h1tmg"]
 [ext_resource type="Script" uid="uid://d1xjavqwsy3x6" path="res://exit_button.gd" id="3_makkp"]
@@ -28,11 +29,12 @@ expand_mode = 1
 
 [node name="StartButton" type="Button" parent="." unique_id=268134863]
 layout_mode = 0
-offset_left = 899.0
-offset_top = 373.0
-offset_right = 1088.0
-offset_bottom = 427.0
-theme_override_font_sizes/font_size = 32
+offset_left = 61.0
+offset_top = 394.0
+offset_right = 149.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("2_b47yg")
+theme_override_font_sizes/font_size = 20
 toggle_mode = true
 button_pressed = true
 action_mode = 0
@@ -41,33 +43,25 @@ script = ExtResource("2_makkp")
 
 [node name="MyRecordsButton" type="Button" parent="." unique_id=1661960972]
 layout_mode = 0
-offset_left = 773.0
-offset_top = 445.0
-offset_right = 1097.0
-offset_bottom = 499.0
-theme_override_font_sizes/font_size = 32
+offset_left = 31.0
+offset_top = 529.0
+offset_right = 199.0
+offset_bottom = 553.0
+theme_override_fonts/font = ExtResource("2_b47yg")
+theme_override_font_sizes/font_size = 20
 toggle_mode = true
 button_pressed = true
 text = "MY RECORDS
 "
 script = ExtResource("3_makkp")
 
-[node name="settingsButton" type="Button" parent="MyRecordsButton" unique_id=611278563]
-layout_mode = 0
-offset_left = 193.0
-offset_top = -418.0
-offset_right = 355.0
-offset_bottom = -366.0
-theme_override_font_sizes/font_size = 28
-text = "SETTINGS"
-script = ExtResource("4_gf6c3")
-
 [node name="TitleLabel" type="Label" parent="." unique_id=369766859]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 193.0
-offset_right = 1096.0
-offset_bottom = 330.13806
+offset_left = 41.0
+offset_top = 30.0
+offset_right = 1126.0
+offset_bottom = 167.13806
+theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 35
 text = "hook rivals:the knowlege battle"
 horizontal_alignment = 1
@@ -82,19 +76,33 @@ script = ExtResource("3_h1tmg")
 [node name="LineEdit" type="LineEdit" parent="Name" unique_id=45122551]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 0
-offset_left = 623.0
-offset_top = 289.0
-offset_right = 1085.0
-offset_bottom = 341.0
+offset_left = 27.000004
+offset_top = 321.00006
+offset_right = 489.0
+offset_bottom = 373.00006
 rotation = 0.0015609274
+theme_override_fonts/font = ExtResource("2_b47yg")
 placeholder_text = "Your name"
 max_length = 16
 
+[node name="settingsButton" type="Button" parent="." unique_id=611278563]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 437.0
+offset_right = 175.0
+offset_bottom = 461.0
+theme_override_fonts/font = ExtResource("2_b47yg")
+theme_override_font_sizes/font_size = 20
+text = "SETTINGS"
+script = ExtResource("4_gf6c3")
+
 [node name="CreditsButton" type="Button" parent="." unique_id=497286070]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 21.0
-offset_right = 193.0
-offset_bottom = 71.0
+offset_left = 49.0
+offset_top = 481.0
+offset_right = 169.0
+offset_bottom = 505.0
+theme_override_fonts/font = ExtResource("2_b47yg")
+theme_override_font_sizes/font_size = 20
 text = "CREDITS"
 script = ExtResource("5_1rgl0")
