@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://br0aofad2tb0v"]
+
+[ext_resource type="Texture2D" uid="uid://cso3sflxxf2xy" path="res://GAME/456.jpg" id="1_hiy7d"]
+[ext_resource type="Script" uid="uid://eg1jtjhw85d2" path="res://e_nter_button.gd" id="2_aj4f2"]
+
+[node name="GameProgressionControl" type="Control" unique_id=1075601730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=1523278091]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 5.0
+offset_right = 1160.0
+offset_bottom = 638.0
+texture = ExtResource("1_hiy7d")
+expand_mode = 2
+
+[node name="TitleLabel" type="Label" parent="BackgroundTextureRect" unique_id=350282896]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 41.0
+offset_right = 1147.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 39
+text = "GAME PROGRESSION"
+
+[node name="GameProgressionLabel" type="Label" parent="BackgroundTextureRect" unique_id=437071252]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 154.0
+offset_right = 844.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 21
+text = " SHORE
+Levels 1–20
+Difficulty: EASY
+
+  REEF
+Levels 21–40
+Difficulty: MEDIUM
+
+DEEP SEA
+Levels 41–60
+Difficulty: HARD"
+
+[node name="ENterButton" type="Button" parent="." unique_id=1087133689]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 535.0
+offset_right = 608.0
+offset_bottom = 584.0
+text = "ENTER
+"
+script = ExtResource("2_aj4f2")
