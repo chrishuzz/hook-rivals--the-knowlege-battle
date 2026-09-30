@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddioh278nft1r"]
 
 [ext_resource type="Texture2D" uid="uid://cso3sflxxf2xy" path="res://GAME/456.jpg" id="1_mbaq1"]
-[ext_resource type="Script" uid="uid://daynb7rnponxn" path="res://texture_progress_bar.gd" id="3_sr5oc"]
+[ext_resource type="Script" uid="uid://cadgx3xaxjsd" path="res://shore_button.gd" id="3_whhpt"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
 
@@ -22,12 +22,11 @@ offset_bottom = 645.0
 texture = SubResource("ImageTexture_g4v7s")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=566051264]
-modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
 layout_mode = 0
 offset_left = 4.0
 offset_top = 1.0
 offset_right = 1154.0
-offset_bottom = 647.0
+offset_bottom = 638.0
 texture = ExtResource("1_mbaq1")
 expand_mode = 2
 
@@ -38,51 +37,34 @@ anchor_left = 0.115
 anchor_top = 0.134
 anchor_right = 0.115
 anchor_bottom = 0.134
-offset_left = -96.479996
-offset_top = -30.832
-offset_right = 199.52
-offset_bottom = 86.168
-theme_override_font_sizes/font_size = 20
+offset_left = 205.52
+offset_top = -23.832
+offset_right = 501.52002
+offset_bottom = 93.168
+theme_override_font_sizes/font_size = 41
 text = "HOW TO PLAY?
 "
 
+[node name="NextButton" type="Button" parent="." unique_id=1903363608]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 511.0
+offset_right = 634.0
+offset_bottom = 572.0
+theme_override_font_sizes/font_size = 26
+text = "NEXT"
+script = ExtResource("3_whhpt")
+
 [node name="howtoplyaLabel" type="Label" parent="." unique_id=412249086]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 134.0
-offset_right = 765.0
-offset_bottom = 446.0
-theme_override_font_sizes/font_size = 20
+offset_left = 363.0
+offset_top = 182.0
+offset_right = 910.0
+offset_bottom = 494.0
+theme_override_font_sizes/font_size = 30
 text = "1. Enter yor name
-
 2. Catch Fish
-
 3. Answer the quiz
-
 4. Correct answer earn points
-
 5. Complete levels to unlock new area
-
 6. Check your score and my record"
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1682651189]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.002
-anchor_bottom = 0.025
-offset_left = 21.0
-offset_top = 504.0
-offset_right = 1166.696
-offset_bottom = 536.8
-script = ExtResource("3_sr5oc")
-
-[node name="ProgressBar" type="ProgressBar" parent="TextureProgressBar" unique_id=1261750128]
-layout_mode = 0
-offset_left = -16.0
-offset_top = 91.0
-offset_right = 1135.0
-offset_bottom = 142.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-show_percentage = false
-indeterminate = true
-editor_preview_indeterminate = false

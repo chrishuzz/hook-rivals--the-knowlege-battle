@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://do8gm4aog3wkg"]
 
+[ext_resource type="Script" uid="uid://daynb7rnponxn" path="res://texture_progress_bar.gd" id="1_74xf4"]
 [ext_resource type="Texture2D" uid="uid://3jr5tno26afv" path="res://825259986_1780547196612649_4498206962763627204_n.jpg" id="1_pa1l2"]
+[ext_resource type="Texture2D" uid="uid://wo6000en8mqg" path="res://CONTROLS/5f84b266-a2fa-47c9-b214-543fd6c228e5.png" id="2_fgney"]
 [ext_resource type="Texture2D" uid="uid://gk8nm7bnf72f" path="res://GAME/DEEPSEA.jpg" id="2_pa1l2"]
+[ext_resource type="Texture2D" uid="uid://dv88wqh4pw1bh" path="res://CONTROLS/8ef03b68-2c1c-4b78-98c4-6ec27581b634.png" id="3_74xf4"]
+[ext_resource type="Texture2D" uid="uid://fghngopy2m6x" path="res://CONTROLS/6c986fef-bf9e-44c8-b070-b5227ba006ad.png" id="4_pa1l2"]
 
 [node name="LAODING SCREEN" type="Control" unique_id=1390255275]
 layout_mode = 3
@@ -28,3 +32,101 @@ offset_right = 1156.0
 offset_bottom = 646.0
 texture = ExtResource("2_pa1l2")
 expand_mode = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1753128201]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 1145.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 50
+text = "CONTROLS
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WASD" type="Sprite2D" parent="." unique_id=1431903115]
+position = Vector2(350, 291)
+scale = Vector2(2.2897725, 2.504386)
+texture = ExtResource("2_fgney")
+
+[node name="Label" type="Label" parent="WASD" unique_id=526024524]
+offset_left = -7.4243193
+offset_top = -22.360771
+offset_right = 8.575681
+offset_bottom = 0.6392288
+text = "W"
+
+[node name="Label2" type="Label" parent="WASD" unique_id=1024536891]
+offset_left = -33.19107
+offset_top = 4.7915936
+offset_right = -17.19107
+offset_bottom = 27.791594
+text = "A"
+
+[node name="Label3" type="Label" parent="WASD" unique_id=763260950]
+offset_left = -3.0570738
+offset_top = 4.7915936
+offset_right = 12.942926
+offset_bottom = 53.791595
+text = "S
+"
+
+[node name="Label4" type="Label" parent="WASD" unique_id=1854680074]
+offset_left = 24.456577
+offset_top = 5.190893
+offset_right = 40.456577
+offset_bottom = 54.190895
+text = "D
+
+"
+
+[node name="CAST" type="Sprite2D" parent="." unique_id=364694942]
+position = Vector2(693.00006, 245)
+rotation = 3.1316674
+texture = ExtResource("3_74xf4")
+
+[node name="Label" type="Label" parent="CAST" unique_id=1274427276]
+offset_left = -55.285072
+offset_top = 28.452696
+offset_right = 29.714928
+offset_bottom = 57.422638
+rotation = 3.1415927
+scale = Vector2(1.4585214, 1.632397)
+text = "Use to cast"
+
+[node name="Label2" type="Label" parent="CAST" unique_id=1066241273]
+offset_left = -47.134106
+offset_top = -87.47211
+offset_right = 37.865894
+offset_bottom = -58.502167
+rotation = 3.1590238
+scale = Vector2(1.5102609, 1.4288273)
+text = "Use to get the hook back"
+
+[node name="ROLL BACK" type="Sprite2D" parent="." unique_id=1604532227]
+position = Vector2(694.00006, 350)
+rotation = 3.131742
+scale = Vector2(1.0025685, 1.0816361)
+texture = ExtResource("4_pa1l2")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1326653287]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.002
+anchor_bottom = 0.025
+offset_left = 2.0
+offset_top = 595.0
+offset_right = 1147.696
+offset_bottom = 627.8
+script = ExtResource("1_74xf4")
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureProgressBar" unique_id=1499248352]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1149.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+show_percentage = false
+indeterminate = true
+editor_preview_indeterminate = false
