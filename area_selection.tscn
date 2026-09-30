@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ddioh278nft1r"]
 
 [ext_resource type="Texture2D" uid="uid://cso3sflxxf2xy" path="res://GAME/456.jpg" id="1_mbaq1"]
-[ext_resource type="FontFile" uid="uid://bk0eov24ndrwu" path="res://MAIN MENU/PressStart2P.ttf" id="2_whhpt"]
 [ext_resource type="Script" uid="uid://daynb7rnponxn" path="res://texture_progress_bar.gd" id="3_sr5oc"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_g4v7s"]
@@ -28,7 +27,7 @@ layout_mode = 0
 offset_left = 4.0
 offset_top = 1.0
 offset_right = 1154.0
-offset_bottom = 638.0
+offset_bottom = 647.0
 texture = ExtResource("1_mbaq1")
 expand_mode = 2
 
@@ -43,7 +42,6 @@ offset_left = -96.479996
 offset_top = -30.832
 offset_right = 199.52
 offset_bottom = 86.168
-theme_override_fonts/font = ExtResource("2_whhpt")
 theme_override_font_sizes/font_size = 20
 text = "HOW TO PLAY?
 "
@@ -54,7 +52,6 @@ offset_left = 25.0
 offset_top = 134.0
 offset_right = 765.0
 offset_bottom = 446.0
-theme_override_fonts/font = ExtResource("2_whhpt")
 theme_override_font_sizes/font_size = 20
 text = "1. Enter yor name
 
@@ -73,18 +70,18 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.002
 anchor_bottom = 0.025
-offset_left = 2.0
-offset_top = 595.0
-offset_right = 1147.696
-offset_bottom = 627.8
+offset_left = 21.0
+offset_top = 504.0
+offset_right = 1166.696
+offset_bottom = 536.8
 script = ExtResource("3_sr5oc")
 
 [node name="ProgressBar" type="ProgressBar" parent="TextureProgressBar" unique_id=1261750128]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 1149.0
-offset_bottom = 52.0
+offset_left = -16.0
+offset_top = 91.0
+offset_right = 1135.0
+offset_bottom = 142.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 show_percentage = false
 indeterminate = true

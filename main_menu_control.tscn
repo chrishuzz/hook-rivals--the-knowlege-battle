@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://3av7j3rpx2x7"]
 
 [ext_resource type="Texture2D" uid="uid://bsk6j7ba4ani7" path="res://MAIN MENU/123.jpg" id="1_makkp"]
-[ext_resource type="FontFile" uid="uid://bk0eov24ndrwu" path="res://MAIN MENU/PressStart2P.ttf" id="2_b47yg"]
 [ext_resource type="Script" uid="uid://bvxf7l3udadxm" path="res://start_button.gd" id="2_makkp"]
 [ext_resource type="Script" uid="uid://cvey32ma0ency" path="res://NameEntry.gd" id="3_h1tmg"]
 [ext_resource type="Script" uid="uid://d1xjavqwsy3x6" path="res://exit_button.gd" id="3_makkp"]
@@ -33,7 +32,6 @@ offset_left = 61.0
 offset_top = 394.0
 offset_right = 149.0
 offset_bottom = 418.0
-theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 20
 toggle_mode = true
 button_pressed = true
@@ -47,7 +45,6 @@ offset_left = 31.0
 offset_top = 529.0
 offset_right = 199.0
 offset_bottom = 553.0
-theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 20
 toggle_mode = true
 button_pressed = true
@@ -61,7 +58,6 @@ offset_left = 41.0
 offset_top = 30.0
 offset_right = 1126.0
 offset_bottom = 167.13806
-theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 35
 text = "hook rivals:the knowlege battle"
 horizontal_alignment = 1
@@ -81,7 +77,6 @@ offset_top = 321.00006
 offset_right = 489.0
 offset_bottom = 373.00006
 rotation = 0.0015609274
-theme_override_fonts/font = ExtResource("2_b47yg")
 placeholder_text = "Your name"
 max_length = 16
 
@@ -91,7 +86,6 @@ offset_left = 39.0
 offset_top = 437.0
 offset_right = 175.0
 offset_bottom = 461.0
-theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 20
 text = "SETTINGS"
 script = ExtResource("4_gf6c3")
@@ -102,7 +96,6 @@ offset_left = 49.0
 offset_top = 481.0
 offset_right = 169.0
 offset_bottom = 505.0
-theme_override_fonts/font = ExtResource("2_b47yg")
 theme_override_font_sizes/font_size = 20
 text = "CREDITS"
 script = ExtResource("5_1rgl0")
