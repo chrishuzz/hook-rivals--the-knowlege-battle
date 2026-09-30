@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsk6j7ba4ani7" path="res://MAIN MENU/123.jpg" id="1_makkp"]
 [ext_resource type="Script" uid="uid://bvxf7l3udadxm" path="res://start_button.gd" id="2_makkp"]
 [ext_resource type="Script" uid="uid://cvey32ma0ency" path="res://NameEntry.gd" id="3_h1tmg"]
+[ext_resource type="Script" uid="uid://d1xjavqwsy3x6" path="res://exit_button.gd" id="3_makkp"]
 
 [node name="MainMenuControl" type="Control" unique_id=404102864]
 layout_mode = 3
@@ -47,6 +48,7 @@ toggle_mode = true
 button_pressed = true
 text = "VIEW LEADERBOARD
 "
+script = ExtResource("3_makkp")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=369766859]
 layout_mode = 0

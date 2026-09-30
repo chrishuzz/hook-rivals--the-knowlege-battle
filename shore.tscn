@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://whj5l433vll7" path="res://exit.gd" id="2_vdpoa"]
 [ext_resource type="Texture2D" uid="uid://cg54qet6omy5o" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_idle.png" id="3_166qr"]
 [ext_resource type="Texture2D" uid="uid://308q8yani7qy" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_hook.png" id="4_7ormo"]
+[ext_resource type="Script" uid="uid://cvpdtytwneiqh" path="res://reef.gd" id="6_166qr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 50.159744
@@ -133,10 +134,10 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=310272662]
 layout_mode = 0
-offset_left = -9.0
-offset_top = -3.0
-offset_right = 1144.0
-offset_bottom = 646.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 650.0
 texture = ExtResource("1_rdc64")
 expand_mode = 1
 
@@ -162,11 +163,11 @@ position = Vector2(189, 376)
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1362191159]
-position = Vector2(256, 319)
+position = Vector2(200, 310)
 scale = Vector2(3.8270493, 3.8624263)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
 animation = &"FISHING"
-frame_progress = 0.9071908
+frame_progress = 0.025294853
 
 [node name="Button" type="Button" parent="." unique_id=143831201]
 layout_mode = 0
@@ -186,3 +187,15 @@ offset_right = 140.0
 offset_bottom = 53.0
 text = "BACK"
 script = ExtResource("2_vdpoa")
+
+[node name="REEF" type="Button" parent="." unique_id=1084795662]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.273
+anchor_bottom = 0.5
+offset_left = 989.0
+offset_top = 11.0
+offset_right = 1083.08
+offset_bottom = 40.0
+text = "NEXT LEVEL(REEF)"
+script = ExtResource("6_166qr")

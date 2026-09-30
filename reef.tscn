@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://o0ukgb4effef"]
 
 [ext_resource type="Texture2D" uid="uid://dsq5a1mpu785g" path="res://GAME/REEF MAP.jpg" id="1_f68mo"]
+[ext_resource type="Script" uid="uid://espaaldve0xf" path="res://button.gd" id="2_b2yve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(1118, 31)
@@ -16,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ReefMap" type="Sprite2D" parent="." unique_id=1021560901]
-position = Vector2(576.5, 325.64914)
+position = Vector2(579, 327)
 scale = Vector2(0.84283626, 0.8428363)
 texture = ExtResource("1_f68mo")
 
@@ -25,3 +26,20 @@ texture = ExtResource("1_f68mo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zone trigger" unique_id=875180412]
 position = Vector2(580, 628)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Button" type="Button" parent="." unique_id=1107607997]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 9.0
+offset_right = 1152.0
+offset_bottom = 78.0
+text = "NEXT LEVEL (DEEPSEA)"
+script = ExtResource("2_b2yve")
+
+[node name="Button" type="Button" parent="Button" unique_id=228822210]
+layout_mode = 0
+offset_left = -962.0
+offset_right = -774.0
+offset_bottom = 65.0
+text = "BACK"
+script = ExtResource("2_b2yve")

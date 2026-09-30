@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dpp2yrg8703bn"]
 
+[ext_resource type="Texture2D" uid="uid://dch1y0ddtdoux" path="res://GAME/141b4b24-679a-41f0-9123-627fdd758648.jpg" id="1_x6hc6"]
+
 [node name="QuizScreen" type="Control" unique_id=2084215695]
 layout_mode = 3
 anchors_preset = 15
@@ -12,25 +14,28 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=138108250]
 layout_mode = 0
-offset_left = -3.0
-offset_right = 1149.0
-offset_bottom = 645.0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 648.0
+texture = ExtResource("1_x6hc6")
+expand_mode = 1
 
 [node name="QUESTION" type="Label" parent="." unique_id=1538939039]
 layout_mode = 0
 offset_left = 254.0
 offset_top = 115.0
-offset_right = 943.0
-offset_bottom = 171.0
+offset_right = 942.0
+offset_bottom = 173.0
 theme_override_font_sizes/font_size = 36
 text = "How many days are there in on e week?"
 
 [node name="ChoiceAButton" type="Button" parent="QUESTION" unique_id=187908804]
 layout_mode = 0
-offset_left = 213.0
-offset_top = 216.0
-offset_right = 436.0
-offset_bottom = 247.0
+offset_left = 212.0
+offset_top = 192.0
+offset_right = 435.0
+offset_bottom = 223.0
 text = "A. 5"
 
 [node name="ChoiceBButton" type="Button" parent="QUESTION/ChoiceAButton" unique_id=1312199828]
