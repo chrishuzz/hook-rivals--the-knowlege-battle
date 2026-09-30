@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dch1y0ddtdoux"
-path="res://.godot/imported/141b4b24-679a-41f0-9123-627fdd758648.jpg-08b2c9cdec1a10a5bf296e451b2a5b23.ctex"
+uid="uid://qsjwtighx6nd"
+path="res://.godot/imported/SteamMan_hook.png-a0f5e171abdd8a27d43c76296391c112.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/141b4b24-679a-41f0-9123-627fdd758648.jpg"
-dest_files=["res://.godot/imported/141b4b24-679a-41f0-9123-627fdd758648.jpg-08b2c9cdec1a10a5bf296e451b2a5b23.ctex"]
+source_file="res://CHARACTER/CHARC/2 Character animation/SteamMan_hook.png"
+dest_files=["res://.godot/imported/SteamMan_hook.png-a0f5e171abdd8a27d43c76296391c112.ctex"]
 
 [params]
 

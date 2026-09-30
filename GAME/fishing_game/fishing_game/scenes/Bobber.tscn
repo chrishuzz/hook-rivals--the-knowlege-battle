@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/Bobber.gd" id="1"]
+
+[sub_resource type="SphereShape3D" id="1"]
+radius = 0.08
+
+[sub_resource type="SphereMesh" id="2"]
+radius = 0.08
+height = 0.16
+
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(0.9, 0.15, 0.15, 1)
+
+[node name="Bobber" type="RigidBody3D"]
+script = ExtResource("1")
+gravity_scale = 1.0
+continuous_cd = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("1")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("3")
