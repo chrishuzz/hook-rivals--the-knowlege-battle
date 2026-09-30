@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drofhuvnc27tu"]
 
-[ext_resource type="Texture2D" uid="uid://ciebjibjm147q" path="res://GAME/MAP SHORE.jpg" id="1_rdc64"]
+[ext_resource type="Texture2D" uid="uid://cc2e0vufbkaoq" path="res://75afeae9-1396-49e1-a14a-e413b382f6da.jpg" id="1_7ormo"]
 [ext_resource type="Texture2D" uid="uid://ptqcuugplkxq" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_fish.png" id="2_4w7th"]
 [ext_resource type="Script" uid="uid://whj5l433vll7" path="res://exit.gd" id="2_vdpoa"]
 [ext_resource type="Texture2D" uid="uid://cg54qet6omy5o" path="res://CHARACTER/CHARC/1 Fisherman/Fisherman_idle.png" id="3_166qr"]
@@ -68,7 +68,7 @@ region = Rect2(240, 0, 48, 48)
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_5cbqv")
 }, {
 "duration": 1.0,
@@ -125,6 +125,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_x6hc6"]
+script/source = "extends Button
+
+func _ready() -> void:
+	pressed.connect(_on_pressed)
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://quiz_screen.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_4w7th"]
+script/source = "extends Button
+
+func _ready() -> void:
+	pressed.connect(_on_pressed)
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://reef.tscn\")
+"
+
 [node name="Control" type="Control" unique_id=195296247]
 layout_mode = 3
 anchors_preset = 0
@@ -135,9 +155,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -9.0
 offset_top = -3.0
-offset_right = 1144.0
+offset_right = 1155.0
 offset_bottom = 646.0
-texture = ExtResource("1_rdc64")
+texture = ExtResource("1_7ormo")
 expand_mode = 1
 
 [node name="WaterMovement (TextureRect)" type="TextureRect" parent="TextureRect" unique_id=258354695]
@@ -162,13 +182,13 @@ position = Vector2(189, 376)
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1362191159]
-position = Vector2(256, 319)
+position = Vector2(217, 322)
 scale = Vector2(3.8270493, 3.8624263)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
 animation = &"FISHING"
 frame_progress = 0.9071908
 
-[node name="Button" type="Button" parent="." unique_id=143831201]
+[node name="CastButton" type="Button" parent="." unique_id=143831201]
 layout_mode = 0
 offset_left = 918.00006
 offset_top = 497.0
@@ -177,12 +197,22 @@ offset_bottom = 528.0
 scale = Vector2(3.0066423, 2.5145607)
 text = "CAST
 "
+script = SubResource("GDScript_x6hc6")
 
-[node name="EXIT" type="Button" parent="." unique_id=1958055054]
+[node name="BackButton" type="Button" parent="." unique_id=1958055054]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 9.0
-offset_right = 140.0
-offset_bottom = 53.0
+offset_left = 19.0
+offset_top = 24.0
+offset_right = 192.0
+offset_bottom = 76.0
 text = "BACK"
 script = ExtResource("2_vdpoa")
+
+[node name="NextLevelButton2" type="Button" parent="." unique_id=2019837918]
+layout_mode = 0
+offset_left = 941.0
+offset_top = 21.0
+offset_right = 1127.0
+offset_bottom = 79.0
+text = "NEXT LEVEL (REEF)"
+script = SubResource("GDScript_4w7th")

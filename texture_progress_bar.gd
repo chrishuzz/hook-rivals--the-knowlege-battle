@@ -1,6 +1,7 @@
 extends TextureProgressBar
 
-@export var next_scene_path: String = "res://area_selection.tscn"
+
+@export var next_scene_path: String = "res://random_control.tscn"
 @export var min_display_time: float = 10.0  
 
 var loading_progress := []

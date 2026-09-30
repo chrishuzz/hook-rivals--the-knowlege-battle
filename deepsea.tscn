@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b18b3nk0jc8cs"]
 
 [ext_resource type="Texture2D" uid="uid://gk8nm7bnf72f" path="res://GAME/DEEPSEA.jpg" id="1_iweb4"]
+[ext_resource type="Script" uid="uid://cxxnswatk27cu" path="res://cs.gd" id="2_wf1kt"]
 
 [node name="deepsea" type="Control" unique_id=185087020]
 layout_mode = 3
@@ -11,10 +12,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Deepsea" type="Sprite2D" parent="." unique_id=840358288]
-position = Vector2(574.75, 325.78244)
+position = Vector2(580, 330.00003)
 scale = Vector2(0.8457875, 0.8457876)
 texture = ExtResource("1_iweb4")
 
 [node name="Isda" type="Sprite2D" parent="." unique_id=231066952]
 position = Vector2(552, 437.00003)
 scale = Vector2(0.12916666, 0.111967355)
+
+[node name="CS" type="Button" parent="." unique_id=2143316765]
+layout_mode = 0
+offset_left = 21.999996
+offset_top = 14.999997
+offset_right = 194.99055
+offset_bottom = 64.94211
+rotation = 0.019057384
+text = "BACK"
+script = ExtResource("2_wf1kt")

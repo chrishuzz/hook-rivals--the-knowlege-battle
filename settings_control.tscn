@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dxur12sbcmk8n"]
+
+[ext_resource type="Texture2D" uid="uid://cjphk5pajmt37" path="res://25619ec4-0370-4bcf-a87f-19756f53eaec.jpg" id="1_7rgrj"]
+[ext_resource type="Script" uid="uid://ckj3o8vj1qpbx" path="res://back_button_2.gd" id="2_f5pau"]
+[ext_resource type="Script" uid="uid://d24x6niwb6y1w" path="res://how_to_play_button.gd" id="2_nkbbf"]
+
+[node name="SettingsControl" type="Control" unique_id=1330365490]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=1301155707]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 1144.0
+offset_bottom = 637.0
+texture = ExtResource("1_7rgrj")
+expand_mode = 2
+
+[node name="TitleLabel" type="Label" parent="BackgroundTextureRect" unique_id=1959789499]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 108.0
+offset_right = 902.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS
+"
+
+[node name="MusicLabel" type="Label" parent="." unique_id=1118052434]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 187.0
+offset_right = 525.0
+offset_bottom = 227.0
+theme_override_font_sizes/font_size = 20
+text = "MUSIC VOLUME"
+
+[node name="MusicHSlider" type="HSlider" parent="MusicLabel" unique_id=82592637]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -1.0
+offset_right = 363.0
+offset_bottom = 28.0
+
+[node name="SoundLabel" type="Label" parent="." unique_id=2069039250]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 238.0
+offset_right = 487.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 18
+text = "SOUND EFFECTS"
+
+[node name="SoundCheckButton" type="CheckButton" parent="SoundLabel" unique_id=1217891193]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.098
+anchor_top = -3.9370003
+anchor_right = -1.098
+anchor_bottom = -3.9370003
+offset_left = 399.818
+offset_top = 93.362015
+offset_right = 447.818
+offset_bottom = 135.36201
+theme_override_font_sizes/font_size = 22
+
+[node name="FullscreenLabel2" type="Label" parent="." unique_id=1080232614]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 286.0
+offset_right = 469.0
+offset_bottom = 312.0
+theme_override_font_sizes/font_size = 18
+text = "FULL SCREEN"
+
+[node name="FullScreenCheckButton" type="CheckButton" parent="FullscreenLabel2" unique_id=2018142945]
+layout_mode = 0
+offset_left = 250.0
+offset_top = -5.0
+offset_right = 294.0
+offset_bottom = 19.0
+
+[node name="Label" type="Label" parent="." unique_id=1480856850]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.74200004
+offset_left = 356.0
+offset_top = 337.0
+offset_right = 713.0
+offset_bottom = -84.59003
+theme_override_font_sizes/font_size = 19
+text = "HOW TO PLAY
+"
+
+[node name="HowToPlayButton" type="Button" parent="." unique_id=712405459]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 333.0
+offset_right = 690.0
+offset_bottom = 364.0
+text = "REVIEW"
+script = ExtResource("2_nkbbf")
+
+[node name="BackButton2" type="Button" parent="." unique_id=1944440240]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 416.0
+offset_right = 639.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 27
+text = "<--  BACK "
+script = ExtResource("2_f5pau")

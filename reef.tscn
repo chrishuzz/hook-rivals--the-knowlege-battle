@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://o0ukgb4effef"]
 
 [ext_resource type="Texture2D" uid="uid://dsq5a1mpu785g" path="res://GAME/REEF MAP.jpg" id="1_f68mo"]
+[ext_resource type="Script" uid="uid://b7s54yjwpnisg" path="res://back_button.gd" id="2_l3yyl"]
+[ext_resource type="Script" uid="uid://c743vxsnn6e5g" path="res://cast_button.gd" id="3_ph0f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(1118, 31)
@@ -25,3 +27,21 @@ texture = ExtResource("1_f68mo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zone trigger" unique_id=875180412]
 position = Vector2(580, 628)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="BACKButton" type="Button" parent="." unique_id=1793365435]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 28.0
+offset_right = 193.0
+offset_bottom = 71.0
+text = "BACK"
+script = ExtResource("2_l3yyl")
+
+[node name="NextlevelButton" type="Button" parent="BACKButton" unique_id=298388738]
+layout_mode = 0
+offset_left = 847.0
+offset_top = -1.0
+offset_right = 1027.0
+offset_bottom = 46.0
+text = "NEXT LEVEL (DEEPSEA)"
+script = ExtResource("3_ph0f1")
