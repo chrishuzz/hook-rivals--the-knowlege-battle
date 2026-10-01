@@ -3,21 +3,21 @@ extends Node2D
 
 const COLUMN_WIDTHS := [30, 110, 64, 56]
 
-@onready var grid: GridContainer = $UI/Panel/Margin/VBox/Grid
-@onready var empty_label: Label = $UI/Panel/Margin/VBox/EmptyLabel
-@onready var back_button: Button = $UI/Panel/Margin/VBox/BackButton
+@onready var grid: GridContainer = $UI/VBox/Grid
+@onready var empty_label: Label = $UI/VBox/EmptyLabel
+@onready var back_button: Button = $UI/VBox/BackButton
 
 
 func _ready() -> void:
 	back_button.pressed.connect(_back)
-	_add_row(["#", "NAME", "SCORE", "WORDS"], Color("ffe14d"))
+	_add_row(["#", "NAME", "SCORE", "WORDS"], Color("ffffffff"))
 	for i in Global.scores.size():
 		var e: Dictionary = Global.scores[i]
 		var col := Color.WHITE
 		if i + 1 == Global.last_rank:
 			col = Color("7be07b")
 		elif str(e["name"]) == Global.player_name:
-			col = Color("8fd3f4")
+			col = Color("f3db4aff")
 		_add_row([str(i + 1), str(e["name"]), str(int(e["score"])), str(int(e["words"]))], col)
 	empty_label.visible = Global.scores.is_empty()
 	back_button.grab_focus()

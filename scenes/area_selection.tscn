@@ -52,7 +52,7 @@ offset_top = 97.0
 offset_right = 380.0
 offset_bottom = 193.0
 theme_override_font_sizes/font_size = 10
-text = "1. Enter yor name
+text = "1. Enter your name
 2. Catch Fish
 3. Answer the quiz
 4. Correct answer earn points

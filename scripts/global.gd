@@ -20,7 +20,7 @@ var _sfx: Dictionary = {}
 
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS   # sounds keep playing while a question pauses the game
+	process_mode = Node.PROCESS_MODE_ALWAYS  
 	_load_settings()
 	_load_scores()
 	_load_questions()
@@ -28,7 +28,7 @@ func _ready() -> void:
 		_sfx[n] = load("res://assets/sfx/%s.wav" % n)
 
 
-# ---------------------------------------------------------------- player name
+
 func set_player_name(new_name: String) -> void:
 	player_name = new_name.strip_edges().left(MAX_NAME_LENGTH)
 	var cfg := ConfigFile.new()
@@ -42,9 +42,9 @@ func _load_settings() -> void:
 		player_name = str(cfg.get_value("player", "name", ""))
 
 
-# ---------------------------------------------------------------- leaderboard
+
 func add_score(score: int, words: int, fish: int) -> int:
-	## Saves a finished run under the current player name. Returns the 1-based rank, or -1 if outside the top list.
+	
 	var rank := 1
 	for e in scores:
 		if int(e["score"]) >= score:
@@ -75,7 +75,7 @@ func _save_scores() -> void:
 		f.store_string(JSON.stringify(scores))
 
 
-# ---------------------------------------------------------------- questions
+
 func _load_questions() -> void:
 	var parsed = null
 	if FileAccess.file_exists(QUESTIONS_PATH):
@@ -98,7 +98,7 @@ func get_question(tier: int) -> Dictionary:
 	return _bags[tier].pop_back()
 
 
-# ---------------------------------------------------------------- sound
+
 func play_sfx(sfx_name: String) -> void:
 	var stream: AudioStream = _sfx.get(sfx_name)
 	if stream == null:
