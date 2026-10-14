@@ -48,7 +48,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 0.76862746)
 theme_override_styles/normal = SubResource("StyleBoxFlat_qrdtl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n861w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_k6t4k")
-text = "LEADERBOARD"
+text = "BEST SCORES"
 
 [node name="NameButton" type="Button" parent="UI" unique_id=1014062712]
 custom_minimum_size = Vector2(0, 22)

@@ -5,14 +5,22 @@
 [node name="Node2D" type="Node2D" unique_id=579044980]
 
 [node name="BC" parent="." unique_id=1409581311 instance=ExtResource("1_thpfr")]
-position = Vector2(1, -1)
+position = Vector2(-1, 2)
 
 [node name="Label" type="Label" parent="." unique_id=759174251]
+<<<<<<< Updated upstream
 offset_left = 2.0
 offset_top = 19.0
 offset_right = 225.0
 offset_bottom = 176.0
 theme_override_font_sizes/font_size = 6
+=======
+offset_left = 188.0
+offset_top = 325.0
+offset_right = 411.0
+offset_bottom = 482.0
+theme_override_font_sizes/font_size = 5
+>>>>>>> Stashed changes
 text = "
 LEADER — REYES, MA. CRISTINA N.
 
@@ -39,11 +47,19 @@ CREDITS
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=2031564024]
+<<<<<<< Updated upstream
 offset_left = 3.0
 offset_top = 147.0
 offset_right = 323.0
 offset_bottom = 288.0
 theme_override_font_sizes/font_size = 6
+=======
+offset_left = 234.0
+offset_top = 333.0
+offset_right = 554.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 5
+>>>>>>> Stashed changes
 text = "UI/UX DESIGNERS — REYES, MA. CRISTINA N.
                   TANZO, CHRISTIAN DENNIS I.
 

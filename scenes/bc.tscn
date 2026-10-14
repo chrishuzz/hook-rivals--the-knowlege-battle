@@ -1,11 +1,66 @@
 [gd_scene format=3 uid="uid://d16o3d437lspe"]
 
-[ext_resource type="Texture2D" uid="uid://dffnyysnorx67" path="res://assets/456.jpg" id="1_7xosm"]
+[ext_resource type="Texture2D" uid="uid://cm8xy4ygrewvu" path="res://88966d92-3d60-4b0e-99f6-ea61fb7b90ac.jpg" id="1_7xosm"]
 
 [node name="BC" type="Node2D" unique_id=1409581311]
 
 [node name="456" type="Sprite2D" parent="." unique_id=143976782]
 modulate = Color(0.585062, 0.585062, 0.5850621, 1)
-position = Vector2(238.75, 135.75)
-scale = Vector2(0.46728516, 0.46614584)
+position = Vector2(240.85638, 132.85652)
+scale = Vector2(0.28725314, 0.28692877)
 texture = ExtResource("1_7xosm")
+
+[node name="Label" type="Label" parent="456" unique_id=1328396580]
+offset_left = -204.8938
+offset_top = -379.38516
+offset_right = 243.1062
+offset_bottom = -248.38516
+theme_override_font_sizes/font_size = 64
+text = "CREDITS
+"
+
+[node name="Label" type="Label" parent="456/Label" unique_id=906730381]
+layout_mode = 0
+offset_left = -97.47501
+offset_top = 198.65556
+offset_right = 870.52496
+offset_bottom = 570.6556
+theme_override_font_sizes/font_size = 16
+text = "LEADER — REYES, MA. CRISTINA N.
+
+
+PROJECT MANAGER — TANZO, CHRISTIAN DENNIS I.
+
+
+GAME DESIGNER — BARING, JAZEL MAE O.
+                DELFIN, KYLE JERALD M.
+                LEGASPI, ZAIRA MYCKHAELAH
+
+
+PROGRAMMERS — REYES, MA. CRISTINA N.
+              TANZO, CHRISTIAN DENNIS I.
+
+"
+
+[node name="Label" type="Label" parent="456/Label/Label" unique_id=1544996103]
+layout_mode = 0
+offset_left = -2.0980835e-05
+offset_top = 285.78522
+offset_right = 1122.0
+offset_bottom = 657.7852
+theme_override_font_sizes/font_size = 14
+text = "UI/UX DESIGNERS — REYES, MA. CRISTINA N.
+                  TANZO, CHRISTIAN DENNIS I.
+
+
+ASSET/GRAPHIC DESIGNER — TANZO, CHRISTIAN DENNIS I.
+
+
+AUDIO DESIGNER — ALL GROUP MEMBERS
+
+
+DOCUMENTATION — BARING, JAZEL MAE O.
+
+
+TESTER / QA — REYES, MA. CRISTINA N.
+"
