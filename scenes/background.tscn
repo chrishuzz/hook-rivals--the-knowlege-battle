@@ -15,6 +15,6 @@ texture = ExtResource("3")
 centered = false
 
 [node name="Map" type="Sprite2D" parent="." unique_id=924323234]
-position = Vector2(239.75, 151.99994)
-scale = Vector2(0.34978068, 0.38802084)
+position = Vector2(636.75, 361.49994)
+scale = Vector2(0.93019, 0.93359375)
 texture = ExtResource("3_jougr")

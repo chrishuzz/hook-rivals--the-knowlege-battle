@@ -23,31 +23,31 @@ grow_vertical = 2
 [node name="BackgrooundTextureRect" type="TextureRect" parent="." unique_id=1320964366]
 modulate = Color(0.27022192, 0.27022192, 0.2702219, 1)
 layout_mode = 0
-offset_left = 1.0
-offset_top = -4.0
-offset_right = 478.0
-offset_bottom = 274.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1294.0
+offset_bottom = 746.0
 texture = ExtResource("1_5gp6g")
 expand_mode = 2
 
 [node name="TtileLabel" type="Label" parent="." unique_id=1734626747]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 4.0
-offset_right = 392.0
-offset_bottom = 40.0
-theme_override_font_sizes/font_size = 10
+offset_left = 162.0
+offset_top = 59.0
+offset_right = 1036.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 23
 text = "RANDOM QUESTIONS FROM THESE CATEGORIES
 
 "
 
 [node name="SubjectsLabel" type="Label" parent="." unique_id=1254919302]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 51.0
-offset_right = 392.0
-offset_bottom = 202.0
-theme_override_font_sizes/font_size = 10
+offset_left = 193.0
+offset_top = 192.0
+offset_right = 1129.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 24
 text = "🗺️ Geography
 🔬 Science
 🏛️ History
@@ -61,10 +61,11 @@ text = "🗺️ Geography
 
 [node name="EnterButton" type="Button" parent="." unique_id=754528301]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 226.0
-offset_right = 301.0
-offset_bottom = 254.0
+offset_left = 532.0
+offset_top = 600.0
+offset_right = 718.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_13qdw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u7l7n")

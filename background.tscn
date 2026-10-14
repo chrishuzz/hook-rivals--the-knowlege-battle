@@ -10,7 +10,7 @@ load_path = "res://.godot/imported/waves.png-eaf24c5101f895533f4d0df7d131e1c8.ct
 
 [node name="Sky" type="Sprite2D" parent="." unique_id=790831603]
 z_index = -10
-scale = Vector2(0.3508772, 0.3502604)
+scale = Vector2(0.9371345, 0.9505208)
 texture = SubResource("CompressedTexture2D_po0nb")
 centered = false
 

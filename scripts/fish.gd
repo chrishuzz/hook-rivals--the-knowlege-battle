@@ -31,7 +31,7 @@ func setup(p_letter: String, color_idx: int, p_speed: float, p_dir: int) -> void
 
 
 func get_rect() -> Rect2:
-	return Rect2(global_position - SIZE / 2.0, SIZE)
+	return Rect2(global_position - SIZE / 10.0, SIZE)
 
 
 func _process(delta: float) -> void:
