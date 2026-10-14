@@ -25,7 +25,6 @@ bg_color = Color(0, 0, 0, 0.61960787)
 script = ExtResource("1")
 
 [node name="MAIN MENU BC" parent="." unique_id=291894739 instance=ExtResource("2_n861w")]
-position = Vector2(-1, -33)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=86881027]
 

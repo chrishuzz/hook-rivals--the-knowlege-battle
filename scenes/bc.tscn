@@ -6,6 +6,6 @@
 
 [node name="456" type="Sprite2D" parent="." unique_id=143976782]
 modulate = Color(0.585062, 0.585062, 0.5850621, 1)
-position = Vector2(650.75, 367.25)
-scale = Vector2(1.2719727, 1.2699653)
+position = Vector2(640, 360)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_7xosm")

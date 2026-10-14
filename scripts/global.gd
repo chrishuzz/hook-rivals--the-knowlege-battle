@@ -20,13 +20,31 @@ var _sfx: Dictionary = {}
 
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS  
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_load_settings()
 	_load_scores()
 	_load_questions()
 	for n in SFX_NAMES:
 		_sfx[n] = load("res://assets/sfx/%s.wav" % n)
 
+
+
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_F11 or (event.keycode == KEY_ENTER and event.alt_pressed):
+			toggle_fullscreen()
+			get_viewport().set_input_as_handled()
+
+
+func toggle_fullscreen() -> void:
+	var win := get_window()
+	if win.mode == Window.MODE_FULLSCREEN or win.mode == Window.MODE_EXCLUSIVE_FULLSCREEN:
+		win.mode = Window.MODE_WINDOWED
+		win.size = Vector2i(1280, 720)
+		win.move_to_center()
+	else:
+		win.mode = Window.MODE_FULLSCREEN
 
 
 func set_player_name(new_name: String) -> void:
