@@ -10,7 +10,11 @@ load_path = "res://.godot/imported/waves.png-eaf24c5101f895533f4d0df7d131e1c8.ct
 
 [node name="Sky" type="Sprite2D" parent="." unique_id=790831603]
 z_index = -10
+<<<<<<< Updated upstream
 scale = Vector2(0.9371345, 0.9505208)
+=======
+scale = Vector2(0.8399123, 0.8372396)
+>>>>>>> Stashed changes
 texture = SubResource("CompressedTexture2D_po0nb")
 centered = false
 

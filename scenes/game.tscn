@@ -19,6 +19,7 @@ bg_color = Color(0, 0, 0, 0.5137255)
 script = ExtResource("1")
 
 [node name="Background" parent="." unique_id=1739224836 instance=ExtResource("2")]
+position = Vector2(-2, -2)
 
 [node name="Fishes" type="Node2D" parent="." unique_id=1069252927]
 
