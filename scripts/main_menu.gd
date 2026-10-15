@@ -11,7 +11,7 @@ func _ready() -> void:
 	play_button.pressed.connect(_go.bind("res://scenes/area_selection.tscn"))
 	board_button.pressed.connect(_go.bind("res://scenes/leaderboard.tscn"))
 	credits_button.pressed.connect(_go.bind("res://scenes/CREDITS.tscn"))
-	settings_button.pressed.connect(_go.bind("res://scenes/CREDITS.tscn"))
+	settings_button.pressed.connect(_go.bind("res://settings_control.tscn"))
 	play_button.grab_focus()
 
 
