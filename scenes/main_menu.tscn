@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://britguo181hc" path="res://scripts/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://d16o3d437lspe" path="res://scenes/bc.tscn" id="2_ekxnf"]
+[ext_resource type="Script" uid="uid://csyjjc51g7g8l" path="res://scenes/quit_button.gd" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrdtl"]
 bg_color = Color(0.16206557, 0.1620656, 0.16206548, 1)
@@ -77,3 +78,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_n861w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_k6t4k")
 text = "SETTINGS
 "
+script = ExtResource("3_bqqt6")

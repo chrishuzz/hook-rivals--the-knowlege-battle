@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://b4560sda3mvxq"]
 
 [ext_resource type="PackedScene" uid="uid://d16o3d437lspe" path="res://scenes/bc.tscn" id="1_thpfr"]
+[ext_resource type="Script" uid="uid://k1runvu3wdsi" path="res://scenes/button.gd" id="2_y8jwk"]
 
 [node name="Node2D" type="Node2D" unique_id=579044980]
 
 [node name="BC" parent="." unique_id=1409581311 instance=ExtResource("1_thpfr")]
 
 [node name="Label" type="Label" parent="." unique_id=759174251]
-offset_left = 100.0
-offset_top = 74.0
-offset_right = 1180.0
-offset_bottom = 386.0
+offset_left = 315.0
+offset_top = 142.0
+offset_right = 1019.0
+offset_bottom = 454.0
 theme_override_constants/line_spacing = 6
 theme_override_font_sizes/font_size = 16
 text = "LEADER — REYES, MA. CRISTINA N.
@@ -24,10 +25,8 @@ GAME DESIGNER — BARING, JAZEL MAE O.
 PROGRAMMERS — REYES, MA. CRISTINA N.
               TANZO, CHRISTIAN DENNIS I.
               PRIMO."
-vertical_alignment = 0
 
 [node name="Label3" type="Label" parent="." unique_id=246990664]
-offset_left = 0.0
 offset_top = 20.0
 offset_right = 1280.0
 offset_bottom = 66.0
@@ -37,10 +36,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=2031564024]
-offset_left = 100.0
-offset_top = 396.0
-offset_right = 1180.0
-offset_bottom = 700.0
+offset_left = 314.0
+offset_top = 421.0
+offset_right = 1394.0
+offset_bottom = 725.0
 theme_override_constants/line_spacing = 6
 theme_override_font_sizes/font_size = 16
 text = "UI/UX DESIGNERS — REYES, MA. CRISTINA N.
@@ -54,4 +53,14 @@ DOCUMENTATION — BARING, JAZEL MAE O.
 
 TESTER / QA — REYES, MA. CRISTINA N.
                            "
-vertical_alignment = 0
+
+[node name="Button" type="Button" parent="Label2" unique_id=682461799]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 240.0
+offset_right = 362.0
+offset_bottom = 267.0
+theme_override_font_sizes/font_size = 15
+text = "BACK
+"
+script = ExtResource("2_y8jwk")

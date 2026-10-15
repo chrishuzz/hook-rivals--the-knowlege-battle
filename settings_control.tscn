@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://jlqu4kwy4nm8"]
+
+[ext_resource type="Texture2D" uid="uid://2dqtqmu0ef06" path="res://assets/9e5e5254-4df7-4fe9-9a5e-82db123ec55f.jpg" id="1_7rgrj"]
+[ext_resource type="Script" uid="uid://8sv53w1javg6" path="res://back_button.gd" id="2_f5pau"]
+
+[node name="SettingsControl" type="Control" unique_id=404212935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1529909480]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 1275.0
+offset_bottom = 730.06335
+texture = ExtResource("1_7rgrj")
+expand_mode = 5
+
+[node name="TitleLabel" type="Label" parent="." unique_id=2040216739]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 136.0
+offset_right = 764.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 31
+text = "SETTINGS"
+
+[node name="MusicLabel" type="Label" parent="TitleLabel" unique_id=1175061701]
+layout_mode = 0
+offset_left = -144.0
+offset_top = 92.0
+offset_right = 84.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 19
+text = "MUSIC VOLUME"
+
+[node name="MusicHSlider" type="HSlider" parent="TitleLabel/MusicLabel" unique_id=1999476837]
+layout_mode = 0
+offset_left = 259.0
+offset_top = -36.0
+offset_right = 467.0
+offset_bottom = 54.0
+
+[node name="SoundLabel" type="Label" parent="." unique_id=282178887]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 305.0
+offset_right = 611.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 19
+text = "SOUND EFFECTS"
+
+[node name="SoundCheckButton" type="CheckButton" parent="SoundLabel" unique_id=1608782831]
+layout_mode = 0
+offset_left = 297.0
+offset_top = -18.0
+offset_right = 344.0
+offset_bottom = 22.0
+
+[node name="Label" type="Label" parent="." unique_id=1119156436]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 387.0
+offset_right = 629.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 23
+text = "HOW TO PLAY"
+
+[node name="HowtoplayButton" type="Button" parent="Label" unique_id=300695435]
+layout_mode = 0
+offset_left = 294.0
+offset_top = -14.0
+offset_right = 454.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 14
+text = "REVIEW"
+
+[node name="BackButton" type="Button" parent="Label/HowtoplayButton" unique_id=2081855158]
+layout_mode = 0
+offset_left = -133.0
+offset_top = 112.0
+offset_right = 79.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 20
+text = "<-- BACK  "
+script = ExtResource("2_f5pau")
