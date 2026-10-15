@@ -36,16 +36,16 @@ load_path = "res://.godot/imported/hook.png-cba43e37e233958ed05d1097c3907559.cte
 
 [node name="Player" type="Node2D" unique_id=770695599]
 z_index = 2
-position = Vector2(95, 113)
+position = Vector2(254, 173)
 script = SubResource("GDScript_sh265")
 
 [node name="Boy" type="Sprite2D" parent="." unique_id=46558738]
-position = Vector2(75.00001, 85)
-scale = Vector2(0.128, 0.131)
+position = Vector2(0.9999981, -2.9999986)
+scale = Vector2(0.22639577, 0.16960345)
 texture = SubResource("CompressedTexture2D_4flbx")
 
 [node name="RodTip" type="Marker2D" parent="Boy" unique_id=1701747771]
-position = Vector2(15, -8)
+position = Vector2(80.1156, 49.483337)
 
 [node name="Line" type="Line2D" parent="Boy/RodTip" unique_id=599411626]
 position = Vector2(500.62497, -331.69464)

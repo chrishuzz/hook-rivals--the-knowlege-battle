@@ -30,24 +30,27 @@ position = Vector2(240, 62)
 [node name="LeftPanel" type="Panel" parent="HUD" unique_id=896940349]
 offset_left = 2.0
 offset_top = 2.0
-offset_right = 110.0
-offset_bottom = 40.0
+offset_right = 250.0
+offset_bottom = 70.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_eiytg")
 
 [node name="WordPanel" type="Panel" parent="HUD" unique_id=2051731232]
-offset_left = 114.0
-offset_top = 3.0
-offset_right = 366.0
-offset_bottom = 30.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 60.0
+grow_horizontal = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_y8jwk")
 
 [node name="RightPanel" type="Panel" parent="HUD" unique_id=93018646]
-offset_left = 370.0
-offset_top = 2.0
-offset_right = 478.0
-offset_bottom = 29.0
+offset_left = 1040.0
+offset_top = 6.0
+offset_right = 1264.0
+offset_bottom = 76.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_w0paw")
 
@@ -57,73 +60,95 @@ offset_top = 7.0
 offset_right = 106.0
 offset_bottom = 15.0
 theme_override_colors/font_color = Color(0.55, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 18
 text = "PLAYER"
 
 [node name="ScoreLabel" type="Label" parent="HUD" unique_id=1433940412]
-offset_left = 8.0
-offset_top = 18.0
-offset_right = 106.0
-offset_bottom = 26.0
+offset_left = 7.0
+offset_top = 27.0
+offset_right = 133.0
+offset_bottom = 45.0
 theme_override_colors/font_color = Color(1, 0.88, 0.3, 1)
+theme_override_font_sizes/font_size = 18
 text = "SCORE 0"
 
 [node name="WordsLabel" type="Label" parent="HUD" unique_id=760201653]
 offset_left = 8.0
-offset_top = 29.0
-offset_right = 106.0
-offset_bottom = 37.0
+offset_top = 46.0
+offset_right = 197.0
+offset_bottom = 64.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
 text = "WORDS 0"
 
 [node name="TimeLabel" type="Label" parent="HUD" unique_id=863307539]
-offset_left = 374.0
-offset_top = 7.0
-offset_right = 472.0
-offset_bottom = 15.0
+offset_left = 1073.0
+offset_top = 32.0
+offset_right = 1217.0
+offset_bottom = 76.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
 text = "TIME 80"
 horizontal_alignment = 2
 
 [node name="LevelLabel" type="Label" parent="HUD" unique_id=624651697]
-offset_left = 374.0
-offset_top = 18.0
-offset_right = 472.0
-offset_bottom = 26.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 68.0
+offset_right = 150.0
+offset_bottom = 92.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0.48, 0.88, 0.48, 1)
+theme_override_font_sizes/font_size = 18
 text = "EASY"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="WordLabel" type="RichTextLabel" parent="HUD" unique_id=2033232981]
-offset_left = 118.0
-offset_top = 8.0
-offset_right = 362.0
-offset_bottom = 30.0
+offset_left = 350.0
+offset_top = 14.0
+offset_right = 930.0
+offset_bottom = 50.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]WORD[/center]"
 scroll_active = false
 
 [node name="HintLabel" type="Label" parent="HUD" unique_id=41068457]
-offset_top = 256.0
-offset_right = 480.0
-offset_bottom = 266.0
+custom_minimum_size = Vector2(1000, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -25.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.05, 0.14, 0.25, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 25
 text = "A-D = MOVE     E = DROP HOOK"
 horizontal_alignment = 1
 
 [node name="BannerLabel" type="Label" parent="HUD" unique_id=1944671786]
-offset_top = 84.0
-offset_right = 480.0
-offset_bottom = 100.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 646.0
+offset_bottom = 688.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.05, 0.14, 0.25, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 26
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="QuestionPopup" parent="." unique_id=1727135227 instance=ExtResource("4")]
 

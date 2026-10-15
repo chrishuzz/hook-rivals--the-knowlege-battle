@@ -1,27 +1,36 @@
 extends Node2D
 
 
-const SCREEN_W := 480.0
-const WATER_Y := 72.0
-const ROUND_TIME := 80.0            
-const WORD_TIME_BONUS := 5.0        
-const BOAT_SPEED := 130.0
-const HOOK_DOWN_SPEED := 200.0
-const HOOK_UP_SPEED := 160.0
-const HOOK_FLOOR_Y := 238.0
-const LANES := [110.0, 138.0, 166.0, 194.0, 222.0]
-const MAX_FISH := 12
+
+const SCREEN_W := 1280.0
+const SCREEN_H := 720.0
+const WATER_Y := 170.0              
+const ROUND_TIME := 80.0
+const WORD_TIME_BONUS := 5.0
+const BOAT_SPEED := 340.0
+const BOAT_MIN_X := 90.0            
+const BOAT_MAX_X := 1190.0
+const HOOK_DOWN_SPEED := 520.0
+const HOOK_UP_SPEED := 420.0
+const HOOK_FLOOR_Y := 610.0         
+const CAUGHT_FISH_OFFSET := Vector2(0, 34)
+const LANES := [250.0, 325.0, 400.0, 475.0, 550.0]
+const MAX_FISH := 16
+const START_FISH := 12
+const FISH_MARGIN := 70.0           
+const FISH_SPEED_SCALE := 2.4
+const LANE_CLEARANCE := Vector2(130.0, 30.0)   
 
 const LETTER_POINTS := 2
-const QUESTION_POINTS := [10, 20, 30]      
-const WRONG_ANSWER_PENALTY := 5            
-const WRONG_FISH_PENALTY := 15             
-const TIER_STARTS := [0, 5, 12]            
-const SPEED_BONUS := [0.0, 12.0, 25.0]     
+const QUESTION_POINTS := [10, 20, 30]
+const WRONG_ANSWER_PENALTY := 5
+const WRONG_FISH_PENALTY := 15
+const TIER_STARTS := [0, 5, 12]
+const SPEED_BONUS := [0.0, 12.0, 25.0]
 const WORDS := [
 	["ARCHIPELAGO", "SUNRISE", "ECOSYSTEM", "VESSEL", "CURRENT", "CRUSTACEAN", "COASTLINE", "SEAGRASS"],
-["PREDATOR", "REEF", "MAMMAL", "PACIFIC", "MOLLUSK", "GEM", "CEPHALOPOD"],
-["CETACEAN", "DECAPOD", "TENTACLE", "KELP", "MARITIME", "REPTILE", "MYTH"]
+	["PREDATOR", "REEF", "MAMMAL", "PACIFIC", "MOLLUSK", "GEM", "CEPHALOPOD"],
+	["CETACEAN", "DECAPOD", "TENTACLE", "KELP", "MARITIME", "REPTILE", "MYTH"],
 ]
 
 enum HookState { IDLE, DROPPING, REELING }
@@ -60,9 +69,10 @@ func _ready() -> void:
 	randomize()
 	name_label.text = Global.player_name
 	banner_label.modulate.a = 0.0
+	player.position.x = SCREEN_W * 0.5 - player.boy.position.x
 	_setup_touch_controls()
 	_new_word()
-	for i in 9:
+	for i in START_FISH:
 		_spawn_fish(true)
 	_update_hud()
 	var t := create_tween()
@@ -102,7 +112,8 @@ func _move_boat(delta: float) -> void:
 		dir -= 1.0
 	if Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
 		dir += 1.0
-	player.position.x = clampf(player.position.x + dir * BOAT_SPEED * delta, 20.0, SCREEN_W - 20.0)
+	var off := player.boy.position.x    
+	player.position.x = clampf(player.position.x + dir * BOAT_SPEED * delta, BOAT_MIN_X - off, BOAT_MAX_X - off)
 
 
 func _start_drop() -> void:
@@ -129,12 +140,12 @@ func _update_hook(delta: float) -> void:
 					hook_state = HookState.REELING
 					Global.play_sfx("catch")
 					break
-			if player.depth >= HOOK_FLOOR_Y - player.rod_tip.global_position.y:
+			if player.hook.global_position.y >= HOOK_FLOOR_Y:
 				hook_state = HookState.REELING
 		HookState.REELING:
 			player.set_depth(player.depth - HOOK_UP_SPEED * delta)
 			if caught != null:
-				caught.global_position = player.hook.global_position + Vector2(0, 6)
+				caught.global_position = player.hook.global_position + CAUGHT_FISH_OFFSET
 			if player.depth <= 0.0:
 				player.set_depth(0.0)
 				hook_state = HookState.IDLE
@@ -226,7 +237,7 @@ func _update_fish(delta: float) -> void:
 		_spawn_fish()
 	for f in fishes.get_children():
 		var fish := f as Fish
-		if not fish.is_caught and (fish.position.x < -40.0 or fish.position.x > SCREEN_W + 40.0):
+		if fish != null and not fish.is_caught and (fish.position.x < -FISH_MARGIN - 40.0 or fish.position.x > SCREEN_W + FISH_MARGIN + 40.0):
 			fish.queue_free()
 
 
@@ -235,16 +246,18 @@ func _spawn_fish(scatter := false) -> void:
 		return
 	var lane: float = LANES.pick_random()
 	var dir := 1 if randf() < 0.5 else -1
-	var x := randf_range(30.0, SCREEN_W - 30.0) if scatter else (-20.0 if dir > 0 else SCREEN_W + 20.0)
+	var x := randf_range(80.0, SCREEN_W - 80.0) if scatter else (-FISH_MARGIN if dir > 0 else SCREEN_W + FISH_MARGIN)
 	var needed := word[letter_index]
 	var has_needed := false
 	for f in fishes.get_children():
 		var other := f as Fish
-		if absf(other.position.y - lane) < 12.0 and absf(other.position.x - x) < 48.0:
-			return                                  
+		if other == null:
+			continue
+		if absf(other.position.y - lane) < LANE_CLEARANCE.y and absf(other.position.x - x) < LANE_CLEARANCE.x:
+			return
 		if other.letter == needed and not other.is_caught:
 			has_needed = true
-	var letter := needed                             
+	var letter := needed
 	if has_needed:
 		var roll := randf()
 		if roll < 0.30:
@@ -256,7 +269,7 @@ func _spawn_fish(scatter := false) -> void:
 	var fish: Fish = fish_scene.instantiate()
 	fish.position = Vector2(x, lane)
 	fishes.add_child(fish)
-	fish.setup(letter, randi() % 5, randf_range(32.0, 48.0) + SPEED_BONUS[_tier()], dir)
+	fish.setup(letter, randi() % 5, (randf_range(32.0, 48.0) + SPEED_BONUS[_tier()]) * FISH_SPEED_SCALE, dir)
 
 
 
@@ -308,20 +321,22 @@ func _setup_touch_controls() -> void:
 	var layer := CanvasLayer.new()
 	layer.layer = 5
 	add_child(layer)
-	for def in [["<", 8.0, "ui_left"], [">", 60.0, "ui_right"]]:
+	for def in [["<", 24.0, "ui_left"], [">", 150.0, "ui_right"]]:
 		var b := Button.new()
 		b.text = def[0]
+		b.add_theme_font_size_override("font_size", 28)
 		b.focus_mode = Control.FOCUS_NONE
-		b.position = Vector2(def[1], 226.0)
-		b.size = Vector2(44, 36)
+		b.position = Vector2(def[1], SCREEN_H - 104.0)
+		b.size = Vector2(110, 80)
 		var action: String = def[2]
 		b.button_down.connect(func(): Input.action_press(action))
 		b.button_up.connect(func(): Input.action_release(action))
 		layer.add_child(b)
 	var hook_button := Button.new()
 	hook_button.text = "HOOK"
+	hook_button.add_theme_font_size_override("font_size", 28)
 	hook_button.focus_mode = Control.FOCUS_NONE
-	hook_button.position = Vector2(412.0, 226.0)
-	hook_button.size = Vector2(60, 36)
+	hook_button.position = Vector2(SCREEN_W - 194.0, SCREEN_H - 104.0)
+	hook_button.size = Vector2(170, 80)
 	hook_button.pressed.connect(_start_drop)
 	layer.add_child(hook_button)

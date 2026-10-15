@@ -5,6 +5,7 @@
 [node name="Node2D" type="Node2D" unique_id=579044980]
 
 [node name="BC" parent="." unique_id=1409581311 instance=ExtResource("1_thpfr")]
+<<<<<<< HEAD
 position = Vector2(-1, 2)
 
 [node name="Label" type="Label" parent="." unique_id=759174251]
@@ -23,6 +24,17 @@ theme_override_font_sizes/font_size = 5
 >>>>>>> Stashed changes
 text = "
 LEADER — REYES, MA. CRISTINA N.
+=======
+
+[node name="Label" type="Label" parent="." unique_id=759174251]
+offset_left = 100.0
+offset_top = 74.0
+offset_right = 1180.0
+offset_bottom = 386.0
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 16
+text = "LEADER — REYES, MA. CRISTINA N.
+>>>>>>> 8f8962a095bb6cc390cacecafe97199652d256fa
 
 PROJECT MANAGER — TANZO, CHRISTIAN DENNIS I.
 
@@ -33,20 +45,20 @@ GAME DESIGNER — BARING, JAZEL MAE O.
 PROGRAMMERS — REYES, MA. CRISTINA N.
               TANZO, CHRISTIAN DENNIS I.
               PRIMO."
-vertical_alignment = 1
+vertical_alignment = 0
 
 [node name="Label3" type="Label" parent="." unique_id=246990664]
-offset_left = 199.0
-offset_top = 5.0
-offset_right = 269.0
-offset_bottom = 41.0
-theme_override_font_sizes/font_size = 10
-text = "
-CREDITS
-"
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 1280.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 34
+text = "CREDITS"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=2031564024]
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 offset_left = 3.0
 offset_top = 147.0
@@ -60,6 +72,14 @@ offset_right = 554.0
 offset_bottom = 474.0
 theme_override_font_sizes/font_size = 5
 >>>>>>> Stashed changes
+=======
+offset_left = 100.0
+offset_top = 396.0
+offset_right = 1180.0
+offset_bottom = 700.0
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 16
+>>>>>>> 8f8962a095bb6cc390cacecafe97199652d256fa
 text = "UI/UX DESIGNERS — REYES, MA. CRISTINA N.
                   TANZO, CHRISTIAN DENNIS I.
 
@@ -71,4 +91,4 @@ DOCUMENTATION — BARING, JAZEL MAE O.
 
 TESTER / QA — REYES, MA. CRISTINA N.
                            "
-vertical_alignment = 1
+vertical_alignment = 0

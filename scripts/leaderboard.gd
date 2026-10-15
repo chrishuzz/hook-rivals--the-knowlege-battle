@@ -1,7 +1,8 @@
 extends Node2D
 
 
-const COLUMN_WIDTHS := [30, 110, 64, 56]
+const COLUMN_WIDTHS := [70, 340, 200, 170]
+const ROW_FONT_SIZE := 20
 
 @onready var grid: GridContainer = $UI/VBox/Grid
 @onready var empty_label: Label = $UI/VBox/EmptyLabel
@@ -27,7 +28,8 @@ func _add_row(cells: Array, col: Color) -> void:
 	for i in 4:
 		var l := Label.new()
 		l.text = cells[i]
-		l.custom_minimum_size = Vector2(COLUMN_WIDTHS[i], 11)
+		l.custom_minimum_size = Vector2(COLUMN_WIDTHS[i], 22)
+		l.add_theme_font_size_override("font_size", ROW_FONT_SIZE)
 		l.add_theme_color_override("font_color", col)
 		if i >= 2:
 			l.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT

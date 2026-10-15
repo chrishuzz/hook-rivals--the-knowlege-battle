@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://3av7j3rpx2x7"]
+
+[ext_resource type="Script" uid="uid://dmooddavjksu2" path="res://main_menu_control.gd" id="1_utvg7"]
+[ext_resource type="Texture2D" uid="uid://cb66xb17ouk6j" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/PLACEHOLDER.jpg" id="2_gf6c3"]
+[ext_resource type="Script" uid="uid://btqtymqtkqdrq" path="res://start_button.gd" id="2_makkp"]
+[ext_resource type="FontFile" uid="uid://ci7m4iyaw1c5" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="3_b47yg"]
+[ext_resource type="Script" uid="uid://d1xjavqwsy3x6" path="res://exit_button.gd" id="3_gf6c3"]
+[ext_resource type="FontFile" uid="uid://yx6fnhehbjxo" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Black.ttf" id="4_gf6c3"]
+
+[node name="MainMenuControl" type="Control" unique_id=404102864]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_utvg7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=412016357]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 632.5485
+texture = ExtResource("2_gf6c3")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=268134863]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 415.0
+offset_right = 676.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("3_b47yg")
+theme_override_font_sizes/font_size = 32
+toggle_mode = true
+button_pressed = true
+action_mode = 0
+text = "START"
+script = ExtResource("2_makkp")
+
+[node name="ExitButton" type="Button" parent="." unique_id=1661960972]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 498.0
+offset_right = 674.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("3_b47yg")
+theme_override_font_sizes/font_size = 32
+toggle_mode = true
+button_pressed = true
+text = "EXIT
+"
+script = ExtResource("3_gf6c3")
+theme_override_fonts/font = ExtResource("3_b47yg")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=369766859]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 42.0
+offset_right = 840.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource("3_b47yg")
+theme_override_font_sizes/font_size = 35
+text = "Hook Rivals:
+ The Knowlege Battle Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleLabel2" type="Label" parent="." unique_id=1663583141]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 570.0
+offset_right = 927.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("4_gf6c3")
+theme_override_font_sizes/font_size = 35
+text = "PAALALA: TEMPORARY LNG POE ITOW"
+horizontal_alignment = 1
+vertical_alignment = 1

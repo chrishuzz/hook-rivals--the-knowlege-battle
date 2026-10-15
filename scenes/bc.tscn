@@ -6,8 +6,13 @@
 
 [node name="456" type="Sprite2D" parent="." unique_id=143976782]
 modulate = Color(0.585062, 0.585062, 0.5850621, 1)
+<<<<<<< HEAD
 position = Vector2(240.85638, 132.85652)
 scale = Vector2(0.28725314, 0.28692877)
+=======
+position = Vector2(640, 360)
+scale = Vector2(1.25, 1.25)
+>>>>>>> 8f8962a095bb6cc390cacecafe97199652d256fa
 texture = ExtResource("1_7xosm")
 
 [node name="Label" type="Label" parent="456" unique_id=1328396580]
