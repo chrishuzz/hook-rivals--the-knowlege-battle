@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 const SCREEN_W := 1280.0
 const SCREEN_H := 720.0
 const WATER_Y := 170.0              

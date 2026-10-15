@@ -5,6 +5,7 @@ const TEXTURE_PATHS := [
 	"res://assets/fish_orange.png", "res://assets/fish_blue.png", "res://assets/fish_pink.png",
 	"res://assets/fish_green.png", "res://assets/fish_yellow.png",
 ]
+
 const SPRITE_SIZE := Vector2(28, 18)
 const FISH_SCALE := 2.5
 const SIZE := SPRITE_SIZE * FISH_SCALE         

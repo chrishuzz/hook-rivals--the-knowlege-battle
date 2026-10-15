@@ -25,11 +25,6 @@ bg_color = Color(0, 0, 0, 0.61960787)
 script = ExtResource("1")
 
 [node name="MAIN MENU BC" parent="." unique_id=291894739 instance=ExtResource("2_n861w")]
-<<<<<<< Updated upstream
-position = Vector2(-1, 4)
-=======
-position = Vector2(-2, 8)
->>>>>>> Stashed changes
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=86881027]
 

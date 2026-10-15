@@ -1,7 +1,6 @@
 extends Node2D
 class_name Player
 
-
 const HOOK_SCALE := 3.5
 const LINE_WIDTH := 2.0
 
